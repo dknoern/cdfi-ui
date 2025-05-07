@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import logo from '../../assets/images/aeris-cloud-logo.svg';
+import logo from '../../assets/images/aeris-cloud-logo.png';
 import styles from './InfoPageContainer.module.scss';
 
 export const InfoPageContainer = ({ children }) => (

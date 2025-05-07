@@ -30,7 +30,7 @@ export const CustomDataReportsSubscriberDashboardFn: FC = () => {
             <Card style={cardStyle}>
               <Paragraph strong>Questions?</Paragraph>
               <Paragraph>
-                For questions or to submit a report request, contact Aeris
+                For questions or to submit a report request, contact CDFI
                 support.
               </Paragraph>
               <MailOutlined style={{ marginRight: 5 }} />

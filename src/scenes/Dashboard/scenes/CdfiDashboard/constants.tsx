@@ -108,9 +108,9 @@ export const largeCardStyle = {
 
 export const contentText = {
   missionEmpty:
-    'A mission statement has not been added to your account. Please contact Aeris support to update your organization details.',
+    'A mission statement has not been added to your account. Please contact CDFI support to update your organization details.',
   descriptionEmpty:
-    'A description has not been added to your account. Please contact Aeris support to update your organization details.',
+    'A description has not been added to your account. Please contact CDFI support to update your organization details.',
   noData: 'No Data',
   noNumber: '+1',
   noWebsite: 'https://',

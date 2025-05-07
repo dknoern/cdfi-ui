@@ -551,7 +551,7 @@ export const adminCdfiSelectedItems = (
       },
       {
         key: 'aerisexplorer',
-        title: 'AERIS® EXPLORER',
+        title: 'CDFI® EXPLORER',
         path: `/aerisexplorer/cdfi/${cdfiConfig.cdfiId}`,
         icon: 'auditicon',
         disabled: false,
@@ -744,7 +744,7 @@ export const adminSubscriberSelectedItems = (): Record<
       },
       {
         key: 'access',
-        title: 'AERIS® EXPLORER',
+        title: 'CDFI® EXPLORER',
         path: `/aerisexplorer/subscriber/${subscriberConfig.subscriberId}`,
         icon: 'auditicon',
         disabled: false,
@@ -828,7 +828,7 @@ export const adminSubscriberSelectedItems = (): Record<
       },
       {
         key: 'access',
-        title: 'AERIS® EXPLORER',
+        title: 'CDFI® EXPLORER',
         path: `/aerisexplorer/subscriber/${subscriberConfig.subscriberId}`,
         icon: 'auditicon',
         disabled: false,

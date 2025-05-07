@@ -1,4 +1,4 @@
-# Aeris Cloud User Interface
+# CDFI User Interface
 
 ## Installation
 
@@ -34,3 +34,10 @@ If You are using Visual Studio Code as your editor, please, follow these steps:
 
 1. Install prettier-vscode extension;
 2. Add `"editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true` to `User` or `Workspace` settings.
+
+
+### Development Standards
+
+1. Use React 18 for UI
+2. Use ant design for UI components
+3. Add new menu items to src/components/Layout/AerisSidebar/routes/user-routes.tsx

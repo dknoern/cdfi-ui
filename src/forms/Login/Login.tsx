@@ -74,7 +74,7 @@ export const Login: FC<LoginProps> = ({ onFinish, username }) => {
           </Link>
 
           <Button id="contactSupportBtn" type="link">
-            <a href={`mailto: ${aerisEmail}`}>Contact Aeris Support</a>
+            <a href={`mailto: ${aerisEmail}`}>Contact CDFI Support</a>
           </Button>
         </Form.Item>
         <Form.Item name="loginButton">

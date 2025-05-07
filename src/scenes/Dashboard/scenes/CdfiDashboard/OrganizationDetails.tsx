@@ -151,11 +151,11 @@ export const OrganizationDetails: FC<WithCompanyTypeProps> = () => {
       <Card bordered={false} style={{ backgroundColor: 'transparent' }}>
         <Paragraph strong>Edit Organization Details</Paragraph>
         <Paragraph>
-          To update any information for your organization, please contact Aeris
+          To update any information for your organization, please contact CDFI
           Support.
         </Paragraph>
         <TypographyLink href="mailto:support@aerisinsight.com">
-          Aeris Support
+          CDFI Support
         </TypographyLink>
       </Card>
     </Col>

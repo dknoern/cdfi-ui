@@ -18,6 +18,7 @@
     "@types/react-router-dom": "^5.1.4",
     "antd": "4.10.2",
     "bootstrap": "^5.3.3",
+    "caniuse-lite": "^1.0.30001717",
     "customize-cra": "^1.0.0",
     "date-fns-tz": "^2.0.0",
     "dompurify": "^3.1.1",

@@ -23,7 +23,7 @@ const AerisFooter = () => {
     setShowSupportHistoryEmailModal(true);
   }, []);
 
-  const copyright = `©2012 - ${new Date().getFullYear()} Aeris Insight, Inc. All Rights Reserved.`;
+  const copyright = `©2012 - ${new Date().getFullYear()} CDFI, Inc. All Rights Reserved.`;
 
   return (
     <>
@@ -42,14 +42,14 @@ const AerisFooter = () => {
                 onClick={startAdd}
                 className={styles.actionSupportButton}
               >
-                Contact Aeris
+                Contact CDFI
               </button>
             </div> :
             <a
               className={styles.link}
               href={`mailto: ${aerisEmail}`}
             >
-              <div className={styles.contactContainer}><div className={styles.mailIcon}><MailOutlined /></div>Contact Aeris</div>
+              <div className={styles.contactContainer}><div className={styles.mailIcon}><MailOutlined /></div>Contact CDFI</div>
             </a>}
         </div>
         <div className={styles.copyright}>

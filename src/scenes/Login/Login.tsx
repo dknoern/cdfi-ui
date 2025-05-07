@@ -22,11 +22,11 @@ export const Login: FC = () => {
     userStore.setRefreshTokenModalVisibility(false);
   }, []);
 
-  const copyright = `2012-${new Date().getFullYear()} Aeris Insight, Inc. All Rights Reserved.`;
+  const copyright = `2012-${new Date().getFullYear()} CDFI, Inc. All Rights Reserved.`;
 
   return (
     <ServicePageLayout>
-      <img src={Logo} alt="Aeris Cloud logo" className={styles.logo} />
+      <img src={Logo} alt="CDFI Cloud logo" className={styles.logo} />
       <LoginForm
         onFinish={handleLogin}
         username={location.state && location.state.username}

@@ -26,7 +26,7 @@ export const AffirmAsCurrentForm: FC<FormProps<InitialsFormData>> = ({
       <Row gutter={[GRID_GUTTER, 0]}>
         <Col span={GRID_COL_FULL_ROW_SPAN}>
           I certify, and have the authority to certify, that the latest document
-          has been uploaded to the Aeris Cloud.
+          has been uploaded to the CDFI Cloud.
           <Space></Space>
         </Col>
       </Row>

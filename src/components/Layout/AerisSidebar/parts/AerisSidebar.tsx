@@ -86,7 +86,7 @@ export const SidebarMainFn: FC = () => {
             </SiderUtilityButton>
             {userStore.isFM && (
               <SiderUtilityButton onClick={activateContactSupportFlow}>
-                Contact Aeris Support
+                Contact CDFI Support
               </SiderUtilityButton>
             )} */}
           </div>

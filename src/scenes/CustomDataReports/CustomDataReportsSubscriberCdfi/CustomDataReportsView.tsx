@@ -18,8 +18,8 @@ export const CustomDataReportsView: FC<CustomDataReportsViewProps> = ({
       <CustomDataReportsTable data={data ? data : []}></CustomDataReportsTable>
       <Paragraph style={{ marginTop: 20, fontStyle: 'italic' }}>
         * For your convenience, report Expiration Date is one year from
-        delivery. Aeris reserves the right to shorten this period without
-        notice. Please contact Aeris Support prior to Expiration Date if you
+        delivery. CDFI reserves the right to shorten this period without
+        notice. Please contact CDFI Support prior to Expiration Date if you
         need an extension.
       </Paragraph>
     </>

@@ -57,14 +57,14 @@ export const makeCustomDataReportsColumns = (
         sortByString(a.requester?.firstName, b.requester?.firstName),
     },
     {
-      title: 'Aeris Contact',
+      title: 'CDFI Contact',
       dataIndex: 'contact',
       render: (user: UserSimple) => user?.firstName + ' ' + user?.lastName,
       sorter: (a: CustomDataReport, b: CustomDataReport): number =>
         sortByString(a.contact?.firstName, b.contact?.firstName),
     },
     {
-      title: 'Aeris Generator',
+      title: 'CDFI Generator',
       dataIndex: 'generator',
       render: (user: UserSimple) =>
         user ? user?.firstName + ' ' + user?.lastName : '',
@@ -77,7 +77,7 @@ export const makeCustomDataReportsColumns = (
       render: (name: string) => (
         <Tooltip
           title={
-            'This is the name of the report being sent to the Requester. The Report Name will be viewable to them in their Aeris Cloud portal.'
+            'This is the name of the report being sent to the Requester. The Report Name will be viewable to them in their CDFI Cloud portal.'
           }
         >
           {name}

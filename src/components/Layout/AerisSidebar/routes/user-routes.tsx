@@ -8,8 +8,8 @@ export const menuItemsByUser = (
   isPublicNonSubscriberEnabled?: boolean,
 ): Record<UserRole, ManagementMenuItem[]> => {
   const aerisUsersTitle = isPublicNonSubscriberEnabled
-    ? 'Aeris Users'
-    : 'Aeris Admin/Analyst';
+    ? 'Users'
+    : 'Admin/Analyst';
   const userItems = [
     {
       key: 'adminanalyst',
@@ -141,7 +141,7 @@ export const menuItemsByUser = (
       },
       {
         key: 'aerisexp',
-        title: 'AERIS® EXPLORER',
+        title: 'CDFI® EXPLORER',
         path: `/aerisExplorer/subscriber/${userStore.companyId}`,
         icon: 'auditicon',
         disabled: false,
@@ -295,7 +295,7 @@ export const menuItemsByUser = (
       },
       {
         key: 'aerisexp',
-        title: 'AERIS® EXPLORER',
+        title: 'CDFI® EXPLORER',
         path: `/aerisExplorer/cdfi/${userStore.companyId}`,
         icon: 'auditicon',
       },

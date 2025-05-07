@@ -28,7 +28,7 @@ export const makeCustomDataReportsColumns = (
       render: (name: string) => (
         <Tooltip
           title={
-            'This is the name of the report being sent to the Requester. The Report Name will be viewable to them in their Aeris Cloud portal.'
+            'This is the name of the report being sent to the Requester. The Report Name will be viewable to them in their CDFI Cloud portal.'
           }
         >
           {name}
