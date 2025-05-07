@@ -141,14 +141,14 @@ export const menuItemsByUser = (
       },
       {
         key: 'aerisexp',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisExplorer/subscriber/${userStore.companyId}`,
         icon: 'auditicon',
         disabled: false,
       },
       {
         key: 'ratingsDistribution',
-        title: 'CDFI RATINGS DISTRIBUTION',
+        title: 'AERIS® RATINGS DISTRIBUTION',
         path: '/ratings-distribution',
         icon: 'staricon',
         disabled: false,
@@ -295,7 +295,7 @@ export const menuItemsByUser = (
       },
       {
         key: 'aerisexp',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisExplorer/cdfi/${userStore.companyId}`,
         icon: 'auditicon',
       },

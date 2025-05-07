@@ -12,7 +12,7 @@ export const TabIntroInstructions: FC<TabIntroInstructionsProps> = observer(
       <>
         {!props.explorerEnabled && (
           <Typography.Paragraph>
-            Your current subscription does not provide access to CDFI Explorer
+            Your current subscription does not provide access to Aeris® Explorer
             reports. Please contact{' '}
             <a href="mailto:subscriptions@aerisinsight.com">
               subscriptions@aerisinsight.com
@@ -23,7 +23,7 @@ export const TabIntroInstructions: FC<TabIntroInstructionsProps> = observer(
         {props.explorerEnabled && (
           <>
             <Typography.Paragraph>
-              CDFI Explorer is a CDFI loan funds analytics tool, which enables
+              Aeris® Explorer is a CDFI loan funds analytics tool, which enables
               subscribers to compare KPI historical trends of one or more CDFI
               loan funds against a peer group. Comparisons in charts and graphs
               or in tables can be exported as Excel worksheets for further

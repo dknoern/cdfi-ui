@@ -11,7 +11,7 @@ export const RatingsDistribution: FC = () => {
       <div>
         <ContentLimiter>
           <PageSectionWrapper
-            title={'CDFI Ratings Distribution'}
+            title={'Aeris® Ratings Distribution'}
             topTitle={subscriberItem?.name}
           >
             <iframe src={urlWithToken} width="100%" height="1200"></iframe>

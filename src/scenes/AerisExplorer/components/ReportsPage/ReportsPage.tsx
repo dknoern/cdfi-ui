@@ -23,7 +23,7 @@ export const ReportsPage = () => {
   return (
     <ContentLimiter>
       <PageSectionWrapper
-        title="CDFI Explorer"
+        title="Aeris® Explorer"
         actionButtons={[<AerisExplorerHomeButton />]}
       >
         <ReportsPageInfoSection

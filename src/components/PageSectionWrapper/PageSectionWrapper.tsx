@@ -73,7 +73,7 @@ export const PageSectionWrapper: FC<PageSectionWrapperProps> = ({
               htmlType="submit"
               type="primary"
             >
-              Download CDFI Fact Sheet
+              Download Aeris® Fact Sheet
             </Button>
           </Col>
         )}

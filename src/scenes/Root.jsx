@@ -15,7 +15,6 @@ import {
   CdfiSelector,
   AerisExplorer,
   RatingsDefinitions,
-  HotCdfis,
 } from './index';
 import { MyCdfis } from './Dashboard/scenes/Subscribers/MyCdfis';
 import { RatingsDistribution } from './Dashboard/scenes/Subscribers/RatingsDistribution';
@@ -88,7 +87,6 @@ const Logged = observer(() => {
             <Route exact path="/cdfi/:id" component={Cdfi} key="cdfi" />
             <Route path="/cdfi" component={SubscribersCdfiManage} key="manage" />
             <Route path="/cdfiselector" component={CdfiSelector} key="manage" />
-            <Route path="/hot-cdfis" component={HotCdfis} key="hot-cdfis" />
             <Route path="/comparison-view-page/:id" component={ComparisonViewPage} key="comparison-view-page" />
             <Route path="/create-peer-or-portfolio/:groupType/:id?/:userType?/:companyId?" component={CdfiSelector} key="/create-peer-or-portfolio" />
             <Route path="/custom-data-reports" component={CustomDataReportsAdminDashboard} key="manage" />

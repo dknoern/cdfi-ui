@@ -511,7 +511,7 @@ export const CreateComparisonView = observer(
       <Modal
         title={
           <div>
-            <h2 className={styles.title}>CDFI Explorer</h2>
+            <h2 className={styles.title}>Aeris® Explorer</h2>
             <h3 className={`${styles.title} ${styles.subTitle}`}>
               Create Comparison
             </h3>

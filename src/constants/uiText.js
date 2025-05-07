@@ -309,7 +309,7 @@ export const uiText = (field, operation, params) =>
     },
     ratingCertificate: {
       downloadOk: 'The document was successfully downloaded.',
-      downloadError: 'No CDFI Rating Certificate available for this CDFI.',
+      downloadError: 'No Aeris® Rating Certificate available for this CDFI.',
     },
     perfMaps: {
       reportsLoadingError: 'An error occurred during loading reports.',

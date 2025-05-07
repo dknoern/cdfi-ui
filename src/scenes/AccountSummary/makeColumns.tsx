@@ -38,7 +38,7 @@ export const getTooltipData = () => {
             CDFI Selector - Aeris
           </a>
           ) to search for CDFIs by impact area, geography, asset size, and more.
-          Download one-page CDFI Fact Sheets containing mission, focus,
+          Download one-page Aeris® Fact Sheets containing mission, focus,
           impact, and financial highlights.
         </p>
       </>
@@ -48,7 +48,7 @@ export const getTooltipData = () => {
     peerGroups:
       'EXPLORER COMPARATIVE PORTFOLIO ANALYTIC TOOL Web-based CDFI analytics platform, with charts and graphs summarizing historical trends for key performance metrics. View performance relative to peers, create customized CDFI peer groups, and export charts to Excel for offline analysis.',
     library:
-      'The Library Reporting Service on the CDFI Cloud allows CDFIs to share documents and reports in their Aeris Library with their investors and funders, reducing reporting redundancies.  ',
+      'The Library Reporting Service on the Aeris® Cloud allows CDFIs to share documents and reports in their Aeris Library with their investors and funders, reducing reporting redundancies.  ',
     customDataReports: (
       <>
         <p>

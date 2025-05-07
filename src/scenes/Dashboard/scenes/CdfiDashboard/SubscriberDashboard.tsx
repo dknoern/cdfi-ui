@@ -60,7 +60,7 @@ export const SubscriberDashboard: FC<WithCompanyTypeProps> = () => {
       topTitle={<LogoHeader imgPath={logo} subTitle={cdfiData?.cdfi.name} />}
     >
       <h1>
-        The following organizations have accessed an CDFI Report for{' '}
+        The following organizations have accessed an Aeris® Report for{' '}
         {cdfiData?.cdfi.name}.{' '}
       </h1>
       <br />

@@ -827,7 +827,7 @@ export const SubscriberSubscriptionEditForm: FC<
               style={checkboxStyle}
               disabled={!isSubscriptionActive && isEditForm}
             >
-              CDFI Explorer / Peer Groups
+              Aeris® Explorer / Peer Groups
             </Checkbox>
           </Form.Item>
         </Col>
@@ -930,7 +930,7 @@ export const SubscriberSubscriptionEditForm: FC<
               style={checkboxStyle}
               disabled={!isSubscriptionActive && isEditForm}
             >
-              CDFI Fact Sheets
+              Aeris® Fact Sheets
             </Checkbox>
           </Form.Item>
         </Col>

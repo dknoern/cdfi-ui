@@ -154,13 +154,13 @@ export const createSubscriptionsColumns = (
     {
       key: 'aerisExplorer',
       dataIndex: 'hasPeerGroupAccess',
-      title: 'CDFI Explorer',
+      title: 'Aeris® Explorer',
       width: 100,
       align: 'center',
       sorter: (a, b): number =>
         sortByBoolean(a.hasPeerGroupAccess, b.hasPeerGroupAccess),
       render: (value: boolean, row): ReactNode => (
-        <Tooltip title="View this CDFI's CDFI Explorer" placement="left">
+        <Tooltip title="View this CDFI's Aeris® Explorer" placement="left">
           <span>
             {value ? (
               <Link

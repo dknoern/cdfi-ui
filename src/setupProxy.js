@@ -33,7 +33,7 @@ module.exports = function (app) {
       '/period'
     ],
     createProxyMiddleware({
-      target: 'https://develop.aerisinsight.com',
+      target: 'http://localhost:8080',
       changeOrigin: true,
     }),
   );

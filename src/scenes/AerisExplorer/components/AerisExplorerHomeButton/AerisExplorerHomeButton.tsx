@@ -17,7 +17,7 @@ export const AerisExplorerHomeButton = observer(
     return (
       <Button icon={<CaretLeftOutlined />} className={styles.homeButton}>
         <Link className={styles.lightBlue} to={aerisExplorerHomePath}>
-          {alternateText || 'Back to CDFI Explorer Homepage'}
+          {alternateText || 'Back to Aeris® Explorer Homepage'}
         </Link>
       </Button>
     );

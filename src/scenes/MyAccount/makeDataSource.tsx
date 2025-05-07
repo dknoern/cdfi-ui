@@ -24,7 +24,7 @@ export const getDataSource = (
 ) => {
   return [
     {
-      name: 'CDFI Ratings Reports:',
+      name: 'Aeris® Ratings Reports:',
       level: getSubscriptionLevel(
         subscriberSubscription?.cdfiCountRatingReports,
       ),
@@ -35,7 +35,7 @@ export const getDataSource = (
       tooltip: tooltip.ratingsReports,
     },
     {
-      name: 'CDFI Performance Maps:',
+      name: 'Aeris® Performance Maps:',
       level: getSubscriptionLevel(
         subscriberSubscription?.cdfiCountPerformanceMaps,
       ),
@@ -46,7 +46,7 @@ export const getDataSource = (
       tooltip: tooltip.perfomanceMaps,
     },
     {
-      name: 'CDFI Explorer:',
+      name: 'Aeris® Explorer:',
       level: getSubscriptionLevel(subscriberSubscription?.cdfiCountPeerGroups),
       slots: subscriberSubscription?.cdfisPeerGroups.length,
       included: getCdfisCurrentlyIncluded(
@@ -55,7 +55,7 @@ export const getDataSource = (
       tooltip: tooltip.peerGroups,
     },
     {
-      name: 'CDFI Fact Sheets:',
+      name: 'Aeris® Fact Sheets:',
       level: getSubscriptionLevel(subscriberSubscription?.cdfiCountFactSheets),
       slots: subscriberSubscription?.cdfisFactSheets.length,
       included: getCdfisCurrentlyIncluded(

@@ -151,7 +151,7 @@ export const AerisExplorer: FC = observer(() => {
   if (!NEW_AERIS_EXPLORER_ENABLED) {
     return (
       <ContentLimiter>
-        <PageSectionWrapper title="CDFI Explorer">
+        <PageSectionWrapper title="Aeris® Explorer">
           <div className={styles.spin}>
             <Spin spinning={loadingIFrame} />
           </div>
@@ -175,7 +175,7 @@ export const AerisExplorer: FC = observer(() => {
   return (
     <ContentLimiter>
       <PageSectionWrapper
-        title="CDFI Explorer"
+        title="Aeris® Explorer"
         description={
           <>
             {activeKey === '' && (

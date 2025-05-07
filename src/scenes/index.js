@@ -13,5 +13,4 @@ export * from './CdfiSelector';
 export * from './AerisExplorer';
 export * from './CustomDataReports/CustomDataReportsAdmin';
 export * from './RatingsDefinitions';
-export * from './HotCdfis';
 

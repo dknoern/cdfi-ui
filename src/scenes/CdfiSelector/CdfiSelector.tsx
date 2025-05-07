@@ -759,7 +759,7 @@ export const CdfiSelector = observer(() => {
     <Form form={form} onFinish={handleSubmit}>
       <ContentLimiter>
         <PageSectionWrapper
-          title={createPeerOrPortfolio ? 'CDFI Explorer' : 'CDFI Selector'}
+          title={createPeerOrPortfolio ? 'Aeris® Explorer' : 'CDFI Selector'}
           description={
             createPeerOrPortfolio && (
               <p>

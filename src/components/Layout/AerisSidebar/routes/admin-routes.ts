@@ -177,7 +177,7 @@ export const adminCdfiSelectedItems = (
       },
       {
         key: 'aerisexplorer',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisexplorer/cdfi/${cdfiConfig.cdfiId}`,
         icon: 'auditicon',
         disabled: false,
@@ -357,7 +357,7 @@ export const adminCdfiSelectedItems = (
       },
       {
         key: 'aerisexplorer',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisexplorer/cdfi/${cdfiConfig.cdfiId}`,
         icon: 'auditicon',
         disabled: false,
@@ -519,7 +519,7 @@ export const adminCdfiSelectedItems = (
       },
       {
         key: 'aerisexplorer',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisexplorer/cdfi/${cdfiConfig.cdfiId}`,
         icon: 'auditicon',
         disabled: false,
@@ -551,7 +551,7 @@ export const adminCdfiSelectedItems = (
       },
       {
         key: 'aerisexplorer',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisexplorer/cdfi/${cdfiConfig.cdfiId}`,
         icon: 'auditicon',
         disabled: false,
@@ -654,7 +654,7 @@ export const adminSubscriberSelectedItems = (): Record<
       },
       {
         key: 'access',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisexplorer/subscriber/${subscriberConfig.subscriberId}`,
         icon: 'auditicon',
         disabled: false,
@@ -744,7 +744,7 @@ export const adminSubscriberSelectedItems = (): Record<
       },
       {
         key: 'access',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisexplorer/subscriber/${subscriberConfig.subscriberId}`,
         icon: 'auditicon',
         disabled: false,
@@ -828,7 +828,7 @@ export const adminSubscriberSelectedItems = (): Record<
       },
       {
         key: 'access',
-        title: 'CDFI EXPLORER',
+        title: 'AERIS® EXPLORER',
         path: `/aerisexplorer/subscriber/${subscriberConfig.subscriberId}`,
         icon: 'auditicon',
         disabled: false,

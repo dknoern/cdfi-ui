@@ -13,7 +13,7 @@ export const ComparisonViewPage = () => {
   return (
     <ContentLimiter>
       <PageSectionWrapper
-        title="CDFI Explorer Comparison Report"
+        title="Aeris® Explorer Comparison Report"
         actionButtons={[<AerisExplorerHomeButton />]}
       >
         <ComparisonViewInfoSection
