@@ -41,3 +41,4 @@ If You are using Visual Studio Code as your editor, please, follow these steps:
 1. Use React 18 for UI
 2. Use ant design for UI components
 3. Add new menu items to src/components/Layout/AerisSidebar/routes/user-routes.tsx
+4. When considering backend APIs, new ones are defined in ./swagger.yml

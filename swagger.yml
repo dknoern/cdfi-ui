@@ -1,0 +1,299 @@
+openapi: 3.0.0
+info:
+  title: Companies API
+  description: API for accessing information about lending organizations/companies
+  contact:
+    name: API Support
+  version: 1.0.0
+  
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+
+paths:
+  /anonymous/getAllCompanies:
+    get:
+      summary: Get a list of all companies
+      description: Returns a list of all lending organizations/companies
+      responses:
+        '200':
+          description: A list of companies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organization'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+
+components:
+  schemas:
+    Organization:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 397
+          description: Unique identifier for the organization
+        active:
+          type: boolean
+          example: true
+          description: Whether the organization is active
+        name:
+          type: string
+          example: "3CORE"
+          description: Name of the organization
+        address:
+          type: string
+          example: "2515 Ceanothus Avenue"
+          description: Street address
+        city:
+          type: string
+          example: "Chico"
+          description: City name
+        state:
+          type: string
+          example: "CA"
+          description: State code
+        zip:
+          type: string
+          example: "95973"
+          description: ZIP/Postal code
+        phone:
+          type: string
+          example: "15308938732"
+          description: Phone number
+        areaServed:
+          type: array
+          description: Areas where the organization provides services
+          items:
+            $ref: '#/components/schemas/Area'
+        description:
+          type: string
+          description: Detailed description of the organization
+        lendingType:
+          type: array
+          description: Types of lending provided
+          items:
+            $ref: '#/components/schemas/LendingType'
+        primaryLendingType:
+          type: array
+          description: Primary lending focus
+          items:
+            $ref: '#/components/schemas/LendingType'
+        sectoralFocus:
+          type: array
+          description: Sectors of focus
+          items:
+            $ref: '#/components/schemas/SectoralFocus'
+        subImpactAreas:
+          type: array
+          description: Specific impact areas
+          items:
+            $ref: '#/components/schemas/SubImpactArea'
+        targetBeneficiaries:
+          type: array
+          description: Target populations served
+          items:
+            $ref: '#/components/schemas/TargetBeneficiary'
+        rating:
+          type: string
+          example: "★★★ AA-"
+          description: Organization rating
+        shareFinancials:
+          type: string
+          example: "ALL"
+          description: Level of financial disclosure
+        peerGroupAllowed:
+          type: boolean
+          example: true
+          description: Whether peer group comparison is allowed
+        totalAssets:
+          type: number
+          format: float
+          example: 7071596.0
+          description: Total financial assets
+        subscriptionId:
+          type: integer
+          example: 0
+          description: Subscription identifier
+        tags:
+          type: array
+          description: Associated tags or categories
+          items:
+            $ref: '#/components/schemas/Tag'
+        allTypesSubscribed:
+          type: boolean
+          example: false
+          description: Whether all types are subscribed
+        rated:
+          type: string
+          example: "Rated"
+          enum: ["Rated", "Non-Rated"]
+          description: Rating status
+
+    Area:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "California"
+          description: Name of the area
+        stateCode:
+          type: string
+          example: "CA"
+          description: State code
+        version:
+          type: integer
+          example: 1
+          description: Version number
+        id:
+          type: integer
+          example: 5
+          description: Unique identifier
+
+    LendingType:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Business"
+          description: Name of the lending type
+        id:
+          type: integer
+          example: 4
+          description: Unique identifier
+        version:
+          type: integer
+          example: 1
+          description: Version number
+
+    SectoralFocus:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Economic Security"
+          description: Name of the sectoral focus
+        id:
+          type: integer
+          example: 1
+          description: Unique identifier
+        version:
+          type: integer
+          example: 1
+          description: Version number
+
+    SubImpactArea:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Job Creation"
+          description: Name of the sub-impact area
+        impactArea:
+          type: object
+          description: Parent impact area
+          properties:
+            name:
+              type: string
+              example: "Economic Security"
+              description: Name of the impact area
+            id:
+              type: integer
+              example: 1
+              description: Unique identifier
+            version:
+              type: integer
+              example: 1
+              description: Version number
+        id:
+          type: integer
+          example: 3
+          description: Unique identifier
+        version:
+          type: integer
+          example: 1
+          description: Version number
+
+    TargetBeneficiary:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Low Income"
+          description: Name of the beneficiary group
+        id:
+          type: integer
+          example: 1
+          description: Unique identifier
+        version:
+          type: integer
+          example: 1
+          description: Version number
+
+    Tag:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+          description: Unique identifier
+        name:
+          type: string
+          example: "01. No Poverty"
+          description: Name of the tag
+        description:
+          type: string
+          example: "End poverty in all its forms everywhere"
+          description: Detailed description
+        type:
+          type: string
+          example: "ANY"
+          description: Tag type
+        ownerId:
+          type: integer
+          example: 3
+          description: ID of the tag owner
+        isPublic:
+          type: boolean
+          example: true
+          description: Whether the tag is public
+        category:
+          type: object
+          properties:
+            id:
+              type: integer
+              example: 1
+              description: Category ID
+            name:
+              type: string
+              example: "SDGs"
+              description: Category name
+        categoryId:
+          type: integer
+          example: 1
+          description: ID of the category
+        categoryName:
+          type: string
+          example: "SDGs"
+          description: Name of the category
+        isLogoUploaded:
+          type: boolean
+          example: true
+          description: Whether a logo has been uploaded
+        public:
+          type: boolean
+          example: true
+          description: Whether the tag is public
+        logoUploaded:
+          type: boolean
+          example: true
+          description: Whether a logo has been uploaded
