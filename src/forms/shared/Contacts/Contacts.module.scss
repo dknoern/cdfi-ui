@@ -1,0 +1,9 @@
+.narrow {
+  :global(.ant-table-tbody .anticon) {
+    vertical-align: middle;
+  }
+  :global(.ant-table-tbody > tr > td) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

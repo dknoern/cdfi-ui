@@ -1,0 +1,14 @@
+@import 'colors';
+@import 'mixins';
+
+.text {
+  color: $main-black;
+}
+
+:global(.ant-list-item) {
+  @extend .text;
+
+  &.listItem {
+    padding: 4px 0;
+  }
+}

@@ -1,0 +1,27 @@
+@import 'vars';
+@import 'colors';
+
+@mixin Tag($color-bg, $color-border) {
+  background-color: $color-bg;
+  border-color: $color-border;
+  margin: 1px;
+  white-space: normal;
+
+  &:hover {
+    background-color: $color-bg;
+    border-color: $color-border;
+    opacity: unset;
+  }
+}
+
+.sdgTag {
+  @include Tag($green-2, $main-green);
+}
+
+.irisTag {
+  @include Tag($yellow-2, $main-yellow);
+}
+
+.customTag {
+  @include Tag($red-2, $main-red);
+}

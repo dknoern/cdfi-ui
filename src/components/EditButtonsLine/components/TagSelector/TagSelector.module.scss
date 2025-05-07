@@ -1,0 +1,16 @@
+@import 'colors';
+@import 'mixins';
+
+.tagsDropdown {
+  :global(.ant-select-tree-indent-unit) {
+    width: 10px;
+  }
+
+  :global(.ant-select-tree-switcher.ant-select-tree-switcher-noop) {
+    width: 14px;
+  }
+
+  :global(.anticon) {
+    @include Icon;
+  }
+}

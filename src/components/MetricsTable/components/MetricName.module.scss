@@ -1,0 +1,10 @@
+.metric {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  & > *:not(:first-child) {
+    margin-left: 8px;
+  }
+}

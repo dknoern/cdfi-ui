@@ -1,0 +1,69 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+$panelWidth: 240px;
+
+.addMetricButton {
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  background: none;
+}
+
+.addMetricButtonIcon {
+  @include fontSize(md);
+  vertical-align: middle;
+}
+
+.pageSection {
+  padding: 24px;
+  flex: 1;
+  transition: margin 0.3s;
+
+  &.open {
+    margin-left: $panelWidth;
+  }
+}
+
+.sectionWrapper {
+  display: flex;
+  margin: -24px;
+}
+
+:global(.ant-table.ant-table-small .ant-table-thead > tr > th) {
+  padding: 6px;
+}
+
+:global(.ant-table.ant-table-small .ant-table-tbody > tr > td) {
+  padding: 10px;
+}
+
+.tableSearchBar {
+  margin-bottom: 0.5rem;
+}
+
+.actionButton {
+  border: 1px solid $main-blue;
+  background-color: unset;
+  color: $main-blue;
+
+  :global(.anticon) {
+    @include Icon;
+  }
+}
+
+.actionRowWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.searchWrapper {
+  flex: 1;
+}
+
+.actionButtonsWrapper {
+  display: flex;
+  gap: 8px;
+}

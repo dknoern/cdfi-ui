@@ -1,0 +1,30 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.addMetricBtn {
+  float: right;
+
+  :global(.anticon) {
+    vertical-align: 0.1em;
+  }
+}
+
+.pageTitle {
+  &:global(.ant-typography) {
+    @include fontSize(xl);
+    @include fontWeight(medium);
+
+    margin-bottom: 12px;
+  }
+}
+
+.pageIntro {
+  @include fontSize(lg);
+
+  margin-bottom: $grid-gutter;
+
+  &:global(.ant-typography.ant-typography-secondary) {
+    color: $grey-8;
+  }
+}

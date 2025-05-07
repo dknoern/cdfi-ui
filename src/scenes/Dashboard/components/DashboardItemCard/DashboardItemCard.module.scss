@@ -1,0 +1,116 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import 'effects';
+@import 'mixins';
+
+$color--grey-local: #66788a;
+
+.card {
+  box-shadow: $card-box-shadow;
+  cursor: pointer;
+
+  :global(.ant-card-head) {
+    @include fontWeight(normal);
+
+    border-bottom: 0;
+    text-align: center;
+    color: $main-light-blue;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  :global(.ant-card-head-title) {
+    padding: $grid-gutter 0 calc($grid-gutter/2);
+  }
+
+  :global(.ant-card-body) {
+    padding: calc($grid-gutter/2) $grid-gutter $grid-gutter;
+  }
+}
+
+.valueDescription {
+  @include fontSize(sm);
+}
+
+.kpiCol {
+  text-align: center;
+
+  .value {
+    @include font-title;
+    @include fontWeight(medium);
+
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 44px;
+    color: $main-blue;
+  }
+
+  span {
+    @include fontSize(sm);
+
+    line-height: 20px;
+    color: $color--grey-local;
+  }
+}
+
+// second-level block
+// used in PC card
+.dataCol {
+  @include fontSize(sm);
+
+  text-align: center;
+  line-height: 20px;
+
+  h4 {
+    @include fontWeight(normal);
+    @include fontSize(sm);
+
+    display: inline-block;
+    color: $color--grey-local;
+    margin-right: 4px;
+  }
+
+  span {
+    color: $main-dark-blue;
+  }
+}
+
+// tags block
+.tagsRow {
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+  margin-top: calc($grid-gutter/2);
+  border-top: 1px solid $grey-2;
+  padding: $grid-gutter $grid-gutter 0;
+
+  :global(.ant-list-item) {
+    @include fontSize(sm);
+
+    padding: 0;
+    color: $main-black;
+    line-height: 14px;
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+}
+
+.noTags {
+  @include fontSize(sm);
+
+  color: $color--grey-local;
+}
+
+.tagIcon {
+  @include Icon;
+
+  font-size: 16px;
+}
+
+:global(.ant-row) {
+  &.tagWrapper {
+    flex-flow: row nowrap;
+  }
+}

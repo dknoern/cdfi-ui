@@ -1,0 +1,105 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import 'effects';
+
+.tabs {
+  margin-top: 8px;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    min-width: 160px;
+    position: relative;
+    border: 1px solid $grey-4;
+    border-bottom: 0;
+    background-color: $grey-1;
+    border-radius: $border-radius-basic $border-radius-basic 0 0;
+    box-shadow: $card-box-shadow;
+    text-align: center;
+
+    button {
+      width: 100%;
+      color: $grey-8;
+      opacity: 0.5;
+
+      border-radius: $border-radius-basic $border-radius-basic 0 0;
+    }
+
+    &.active {
+      background-color: white;
+
+      button {
+        color: $main-light-blue;
+        opacity: unset;
+      }
+      &::before {
+        content: '';
+      }
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 4px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      background-color: #fff;
+    }
+  }
+}
+.contentWrapper {
+  border: 1px solid $grey-4;
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+  padding: $grid-gutter;
+  box-shadow: $card-box-shadow;
+
+  &::before {
+    display: block;
+    position: relative;
+    content: '';
+    margin-top: -$grid-gutter;
+    height: $grid-gutter;
+    background-color: #fff;
+  }
+}
+
+.contentItem {
+  display: none;
+
+  &.contentItemActive {
+    display: block;
+  }
+}
+
+.gridlinesDescription {
+  margin-bottom: 16px;
+}
+
+.gridlineItem {
+  display: block;
+}
+
+.formItem {
+  :global(.ant-form-item-label) {
+    padding-bottom: 0;
+  }
+}
+
+.formLabel {
+  @include fontSize(md);
+
+  color: $main-black;
+}
+
+.numberInput {
+  width: 100%;
+  border: 1px solid $grey-5;
+}

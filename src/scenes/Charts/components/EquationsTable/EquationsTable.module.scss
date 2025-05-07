@@ -1,0 +1,64 @@
+@import 'mixins';
+@import 'colors';
+@import 'fonts';
+
+.table {
+  :global(.ant-table-thead) {
+    & > tr > th {
+      border-bottom: none;
+
+      &:not(:last-child) {
+        border-right: 1px solid $main-blue;
+      }
+
+      &:first-child {
+        padding-left: 44px;
+      }
+    }
+  }
+
+  :global(.ant-table-tbody) {
+    & > tr > td {
+      padding: 10px 12px;
+    }
+
+    & > :global(tr.ant-table-row-level-1 > td:first-child) {
+      padding-left: 30px;
+    }
+
+    :global(.ant-table-row.ant-table-row-level-0) {
+      background-color: $main-light-blue;
+      color: $main-white;
+
+      td {
+        border-bottom: 1px solid $main-blue;
+      }
+
+      :global(.ant-table-cell-fix-left) {
+        background: $main-light-blue;
+      }
+
+      td:first-child {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      &:hover,
+      &:nth-child(odd) {
+        td {
+          background-color: $main-light-blue;
+        }
+      }
+    }
+  }
+}
+
+.expandIcon {
+  @include Icon;
+  @include fontSize(sm);
+
+  padding: 16px 16px;
+  margin: -16px 1px -16px -13px;
+}

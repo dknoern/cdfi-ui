@@ -1,0 +1,85 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+$btn-height: 40px;
+$btn-width: 240px;
+
+.nav {
+  @include fontWeight(medium);
+
+  position: relative;
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+
+  &::before,
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  &::before {
+    z-index: 3;
+    background-color: $main-white;
+    height: 25px;
+    top: $btn-height + 1px;
+  }
+
+  &::after {
+    z-index: 1;
+    height: 5px;
+    top: $btn-height;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.list {
+  list-style: none;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-bottom: 1px solid $grey-4;
+  padding: 0 $grid-gutter;
+}
+
+.item {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  margin-right: 4px;
+  width: $btn-width;
+
+  &.active {
+    .button {
+      @include fontWeight(medium);
+
+      color: $main-light-blue;
+      background-color: #fff;
+      height: $btn-height + 1px;
+      position: absolute;
+    }
+  }
+}
+
+.button {
+  height: $btn-height;
+  width: $btn-width;
+  border: 0;
+  outline: none;
+  line-height: $btn-height;
+  text-align: center;
+  background-color: $grey-1;
+  color: rgba(#556065, 0.65);
+  border: 1px solid $grey-4;
+  border-bottom: 0;
+  border-top-left-radius: $border-radius-basic;
+  border-top-right-radius: $border-radius-basic;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

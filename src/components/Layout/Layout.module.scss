@@ -1,0 +1,35 @@
+@import 'vars';
+@import 'colors';
+@import 'shared/localVars';
+
+.root {
+  background: $grey-2;
+  min-height: 100vh;
+}
+
+.underRoot {
+  position: relative;
+  margin-left: $sidebar1Width + $sidebar2Width;
+  margin-top: $headerHeight;
+  transition: margin-left $transitionDuration;
+
+  &.withoutInnerSidebar {
+    margin-left: $sidebar1Width;
+  }
+}
+
+:global(.sidebar-collapsed) {
+  .underRoot {
+    margin-left: $sidebar1CollapsedWidth + $sidebar2Width;
+
+    &.withoutInnerSidebar {
+      margin-left: $sidebar1CollapsedWidth;
+    }
+  }
+}
+
+.container {
+  padding: $grid-gutter;
+  position: relative;
+  background-color: $grey-1;
+}

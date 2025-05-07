@@ -1,0 +1,36 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+$input-border: 1px solid $ant-border-blue;
+$input-box-shadow: 0 0 0 2px $ant-box-shadow-grey;
+
+.container {
+  :global(.form-control) {
+    @include fontSize(md);
+
+    width: 100%;
+    height: 40px;
+    color: $main-black;
+    border-color: $grey-5;
+
+    &:hover {
+      border: $input-border;
+    }
+
+    &:focus {
+      color: $main-black;
+      border: $input-border;
+      box-shadow: $input-box-shadow;
+    }
+  }
+}
+
+.button {
+  @include fontSize(md);
+
+  :global(.selected-flag.open::before) {
+    border: $input-border;
+    box-shadow: $input-box-shadow;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'fonts';
+@import 'colors';
+@import 'mixins';
+
+.category {
+  @include fontWeight(medium);
+}
+
+.tag {
+  @include fontSize(sm);
+}
+
+.customTag {
+  @include fontSize(md);
+
+  min-height: 32px;
+  line-height: 33px;
+  white-space: normal;
+  margin: 0 12px 12px 0;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newTagBtn {
+  margin-top: 8px;
+  padding: 0;
+}

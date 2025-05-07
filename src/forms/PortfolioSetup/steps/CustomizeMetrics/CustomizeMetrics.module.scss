@@ -1,0 +1,17 @@
+@import 'colors';
+@import 'fonts';
+
+.buttonIcon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+.addMetricButton {
+  @include fontSize(md);
+
+  float: right;
+  color: $main-blue;
+  border-color: $main-blue;
+  background: none;
+}

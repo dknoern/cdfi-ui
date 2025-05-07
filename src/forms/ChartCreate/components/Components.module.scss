@@ -1,0 +1,16 @@
+@import 'vars';
+@import 'fonts';
+
+.titleBlock {
+  margin-bottom: $grid-gutter;
+}
+
+:global(h4.ant-typography) {
+  &.stepTitle {
+    @include fontWeight(medium);
+  }
+}
+
+.stepDescription {
+  @include fontSize(lg);
+}

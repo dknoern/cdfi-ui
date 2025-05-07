@@ -1,0 +1,24 @@
+@import 'colors';
+
+.title {
+  font-size: medium;
+  color: $main-light-blue;
+}
+
+.logo {
+  height: 75px;
+  object-fit: contain;
+  animation: drop 0.3s;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

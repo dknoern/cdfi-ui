@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.form {
+  :global(.ant-form-item .ant-upload.ant-upload-drag) {
+    &.dragger {
+      background-color: $main-white;
+    }
+  }
+
+  :global(.ant-upload-list-item-name) {
+    padding: 12px;
+    border-radius: $border-radius-basic;
+    color: $main-black;
+  }
+
+  :global(.ant-upload-text-icon .anticon) {
+    padding: 12px 0;
+    color: $main-black;
+  }
+
+  :global(.ant-upload-list-item-card-actions .anticon-delete) {
+    color: $main-blue;
+  }
+
+  :global(.ant-upload-list-item-info) {
+    padding: 0;
+  }
+
+  :global(.ant-upload-list-item) {
+    padding: 24px 12px;
+    background-color: $blue-1;
+
+    :global(.ant-upload-list-item-card-actions-btn) {
+      opacity: 1;
+    }
+  }
+}
+
+.label {
+  @include fontWeight(medium);
+
+  color: $main-black;
+}
+
+.uploadText {
+  color: $main-black;
+}
+
+.uploadHint {
+  @include fontSize(sm);
+
+  color: $grey-5;
+}
+
+.draggerCollapsed {
+  display: none;
+}
+
+.dragger {
+  min-height: 96px;
+}
+
+.fileUploadContainer {
+  min-height: 150px;
+
+  :global(.ant-upload) {
+    padding-top: 12px;
+  }
+}

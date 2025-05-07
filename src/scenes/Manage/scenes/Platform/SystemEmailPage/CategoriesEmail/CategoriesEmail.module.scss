@@ -1,0 +1,81 @@
+@import 'colors';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.wrapperCategory {
+  width: 50%;
+}
+
+.createCategoryBlock {
+  display: flex;
+  padding-bottom: 15px;
+
+  & input {
+   margin-right: 10px;
+  }
+
+  & button {
+    flex: 1;
+  }
+}
+
+.list {
+  max-height: 500px;
+  overflow: overlay;
+}
+
+.wrapperTemplate {
+  width: 50%;
+}
+
+.editIcon {
+  margin-right: 5px;
+}
+
+.button {
+  padding-top: 30px;
+}
+
+.title {
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.exampleEmailWrapper {
+  :global(.ql-toolbar) {
+    display: none;
+  }
+
+  :global(.ql-container) {
+    background: $grey-1;
+    border-top: 1px solid #ccc !important;
+    border-radius: 4px;
+    max-height: 650px !important;
+    min-height: 650px !important;
+    overflow: auto !important;
+  }
+
+  :global(.ql-editor) {
+    max-height: 630px !important;
+    min-height: 630px !important;
+  }
+}
+
+.spin {
+  position: absolute;
+  width: 90%;
+  height: 650px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 100;
+
+  :global(.ant-spin-spinning) {
+    position: relative !important;
+    top: 70px;
+  }
+}

@@ -1,0 +1,113 @@
+@import 'mixins';
+
+.categoryBlock {
+  font-weight: 500;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e1e3;
+  cursor: pointer;
+}
+
+.subCategoryBlock {
+  @extend .categoryBlock;
+  padding: 8px 24px;
+}
+
+.metricsTable {
+  width: 100%;
+  margin-left: 26px;
+  border-bottom: 1px solid #e0e1e3;
+
+  td,
+  th {
+    border: 1px solid #e0e1e3;
+    border-collapse: collapse;
+    width: 50%;
+    min-height: 20px;
+  }
+
+  th {
+    font-weight: bold;
+    padding: 8px 12px;
+  }
+
+  td {
+    padding: 0;
+  }
+}
+
+%cellCard {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.mappedLabelsList {
+  display: flex;
+  flex-wrap: wrap;
+  color: #1094e9;
+  font-weight: 500;
+  font-size: 12px;
+
+  li {
+    @extend %cellCard;
+    padding: 4px 24px 4px 8px;
+    background: rgba(16, 148, 233, 0.12);
+    position: relative;
+
+    button {
+      padding: 0;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      color: #1094e9;
+      border: 0;
+      height: 16px;
+      width: 16px;
+      text-align: center;
+      background: none;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+.metricLabelCell,
+.metricValueCell {
+  display: block;
+  height: 100%;
+  padding: 10px;
+}
+
+.metricLabelCell {
+  @include textEllipsis;
+
+  max-width: 357px;
+
+  &IsActive {
+    background-color: #c0c0c0;
+  }
+
+  &CanDrop {
+    background-color: #fafafa;
+  }
+}
+
+.metricValueCell {
+  &IsActive {
+    background-color: #c0c0c0;
+  }
+
+  &CanDrop {
+    background-color: #fafafa;
+  }
+
+  .valueItem {
+    @extend %cellCard;
+    background: rgba(16, 148, 233, 0.12);
+  }
+
+  .valueItemIncluded {
+    background: #f4f4f6;
+  }
+}

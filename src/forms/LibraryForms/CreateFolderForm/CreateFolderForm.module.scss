@@ -1,0 +1,10 @@
+@import 'fonts';
+@import 'colors';
+
+.form {
+  color: $main-black;
+
+  :global(.ant-col.ant-form-item-label > label) {
+    @include fontWeight(medium);
+  }
+}

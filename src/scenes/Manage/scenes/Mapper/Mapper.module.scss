@@ -1,0 +1,21 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.pageSection {
+  @include fontSize(md);
+
+  line-height: 20px;
+
+  .saveBtn {
+    padding: 6px 22px;
+    height: unset;
+    background-color: $main-green;
+    border-color: $main-green;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+  }
+}

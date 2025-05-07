@@ -1,0 +1,38 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+%sider-interactive-level1 {
+  @include fontSize(lg);
+
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  color: $main-white;
+  cursor: pointer;
+  transition: none;
+  border: 0;
+  padding: 10px $grid-gutter;
+
+  &:hover,
+  &:focus {
+    @extend %sider-interactive-level1--active;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  :global(.anticon) {
+    @include fontSize(xl);
+
+    margin-right: 0;
+    vertical-align: 2px;
+  }
+}
+
+%sider-interactive-level1--active {
+  color: $main-light-blue;
+  background-color: rgba($main-light-blue, 0.2);
+  border-right: 4px solid $main-light-blue;
+}

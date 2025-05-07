@@ -1,0 +1,141 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.title {
+  @include font-title;
+  @include fontSize('lg');
+  @include fontWeight(semi-bold);
+  margin-bottom: 12px;
+}
+
+.subTitle {
+  @include fontWeight(normal);
+}
+
+.buttonNav {
+  margin: 20px 0;
+}
+
+.steps {
+  padding: 12px;
+}
+
+@mixin buttonStyles(
+  $color,
+  $borderColor,
+  $backgroundColor: none,
+  $flexDirection: row-reverse
+) {
+  margin-right: 8px;
+  color: $color;
+  border: 1px solid $borderColor;
+  background: $backgroundColor;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: $flexDirection;
+
+  & > span {
+    margin-bottom: 2px;
+  }
+
+  & > :global(.anticon) {
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+}
+
+.nextButton {
+  @include buttonStyles($main-light-blue, $main-light-blue);
+}
+
+.backButton {
+  @include buttonStyles($main-light-blue, $main-light-blue, none, row);
+}
+
+.cancelButton,
+.resetAllFiltersButton {
+  @include buttonStyles($grey-8, $grey-8);
+}
+
+.saveButton {
+  @include buttonStyles($main-white, $main-green, $main-green);
+}
+
+.saveOnlyButton {
+  @include buttonStyles($main-white, $main-light-blue, $main-light-blue);
+}
+
+.formContent {
+  height: 400px;
+}
+
+.horizontalDivider {
+  margin: 24px 0 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1px;
+  width: 100%;
+  color: $grey-4;
+  background-color: $grey-4;
+}
+
+.dividerText {
+  background-color: #fff;
+  padding: 12px;
+  color: $main-dark-blue;
+}
+
+.listTitle {
+  @include fontSize('sm');
+  color: $main-light-blue;
+}
+
+.listItem {
+  margin: 8px 0;
+  padding: 8px;
+  background-color: $blue-2;
+  border-radius: $border-radius-basic;
+}
+
+.youAreComparing {
+  margin-bottom: 12px;
+}
+
+.hintText {
+  color: $grey-5;
+  @include fontSize('sm');
+}
+
+.label {
+  @include fontWeight(semi-bold);
+  margin-bottom: 8px;
+}
+
+.errorMessage {
+  @include fontWeight(normal);
+  color: $error-red;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.radioGroupContainer {
+  display: flex;
+}
+
+.radioToolTipsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-right: 12px;
+}
+
+.radioButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

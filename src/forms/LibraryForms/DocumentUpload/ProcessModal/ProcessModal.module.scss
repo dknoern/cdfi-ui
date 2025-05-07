@@ -1,0 +1,19 @@
+@import 'colors';
+@import 'fonts';
+
+.description,
+.instructions {
+  color: $main-dark-blue;
+
+  a {
+    color: $main-light-blue;
+    text-decoration: underline;
+  }
+}
+
+.description {
+  @include fontWeight(medium);
+
+  display: block;
+  margin-bottom: 8px;
+}

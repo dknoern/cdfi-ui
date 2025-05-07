@@ -1,0 +1,87 @@
+@import 'colors';
+
+.title {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.descriptions {
+  width: 80%;
+}
+
+.myAccountTable {
+  width: 95%;
+  margin-top: 30px;
+
+  :global(.ant-table-thead .ant-table-cell) {
+    background: #088096;
+    font-weight: bold;
+  }
+
+  :global(.ant-table-tbody  tr.ant-table-row:hover td) {
+    background: #ffffff !important;
+  }
+
+  :global(.ant-table-tbody  tr.ant-table-row:hover td:first-child) {
+    background: #088096 !important;
+  }
+
+  :global(.ant-table-row .ant-table-cell:first-child) {
+    text-align: left;
+    color: #ffffff;
+    background: #088096;
+  }
+
+  :global(.ant-table-row .ant-table-cell:last-child) {
+    text-align: left;
+  }
+
+  :global(.ant-table-cell) {
+    background: #ffffff;
+    border: 1px solid $main-dark;
+    vertical-align: initial;
+    text-align: center;
+  }
+
+  .aerisProduct {
+    display: flex;
+
+    svg {
+      position: relative;
+      top: -2px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.tooltipTextMyAccount {
+  :global(.ant-tooltip-inner){
+    background: #E4E4E4;
+    color: $main-dark-blue;
+  }
+}
+
+.cardStyle {
+  height: 100%;
+  min-height: 200px;
+  width: 100%;
+  min-width: 300px;
+  margin: 5px;
+
+  & svg {
+    position: relative;
+    top: -4px;
+    margin-right: 5px;
+    color: $main-light-blue;
+  }
+}
+
+.link {
+  color: $main-light-blue;
+  text-decoration: none !important;
+
+  &:hover {
+    color: $main-dark-blue;
+  }
+}

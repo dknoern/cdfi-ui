@@ -1,0 +1,61 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.label {
+  @include fontWeight(medium);
+  @include fontSize(md);
+
+  line-height: 22px;
+  span {
+    margin-right: 8px;
+  }
+
+  :global(.anticon) {
+    color: $grey-5;
+    vertical-align: 0.1em;
+  }
+}
+
+.disabledLabel {
+  @include fontWeight(medium);
+  @include fontSize(md);
+
+  color: rgba(0, 0, 0, 0.25);
+
+  line-height: 22px;
+  span {
+    margin-right: 8px;
+  }
+
+  :global(.anticon) {
+    color: rgba(0, 0, 0, 0.25);
+    vertical-align: 0.1em;
+  }
+}
+
+.form {
+  :global(.ant-col-24.ant-form-item-label > label) {
+    flex-wrap: wrap;
+  }
+
+  :global(.ant-radio-group label) {
+    @include fontSize(sm);
+
+    line-height: 20px;
+  }
+}
+
+.forDivider {
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+  margin-bottom: $grid-gutter;
+
+  &::before {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: $grey-2;
+  }
+}

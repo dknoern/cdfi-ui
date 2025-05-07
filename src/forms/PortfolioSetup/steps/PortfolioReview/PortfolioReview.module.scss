@@ -1,0 +1,30 @@
+@import 'mixins';
+
+:global(h4.ant-typography) {
+  &.title {
+    margin-bottom: 48px;
+  }
+}
+
+.label {
+  margin-bottom: 12px;
+}
+
+.editIcon {
+  @include Icon;
+}
+
+.descriptions {
+  :global(.ant-descriptions-row) {
+    & > th,
+    & > td {
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.reviewSection {
+  &:not(:first-of-type) {
+    margin-top: 48px;
+  }
+}

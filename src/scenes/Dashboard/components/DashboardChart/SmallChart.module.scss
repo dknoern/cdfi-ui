@@ -1,0 +1,82 @@
+@import 'colors';
+@import 'effects';
+@import 'fonts';
+@import 'mixins';
+
+$height-small-chart: 208px;
+$height-small-chart-content: 120px;
+
+.smallChartContainer {
+  @include fontSize(lg);
+
+  height: $height-small-chart;
+  line-height: 32px;
+  box-shadow: $card-box-shadow;
+
+  :global(.ant-card-body) {
+    height: 100%;
+  }
+}
+
+.chartBlock {
+  height: $height-small-chart-content;
+  width: 100%;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.errorIcon {
+  @include fontSize(xxl);
+}
+
+.optionsBtn {
+  color: $grey-5;
+  padding: 0;
+
+  :global(.anticon) {
+    @include Icon;
+    @include fontSize(xl);
+  }
+}
+
+.optionsBtnContainer {
+  text-align: end;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: auto;
+    color: $main-black;
+  }
+}
+
+.chartMenu {
+  ul {
+    li {
+      color: $main-black;
+    }
+    li:hover {
+      background-color: $blue-1;
+    }
+  }
+}
+
+.chartMenuIcon {
+  @include fontSize(xl);
+
+  color: $grey-5;
+}

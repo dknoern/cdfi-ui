@@ -1,0 +1,206 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.spin {
+  position: absolute;
+  width: 98%;
+  height: 100vh;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 100;
+
+  :global(.ant-spin-spinning) {
+    position: relative !important;
+    top: 400px;
+  }
+}
+
+.spinDownloading {
+  :global(.ant-spin-spinning) {
+    left: 40px;
+    z-index: 1;
+  }
+}
+
+.spinErrorMessage {
+  :global(.ant-spin-spinning) {
+    top: 390px;
+    left: 40px;
+    z-index: 1;
+  }
+}
+
+.spinText {
+  position: relative !important;
+  top: 400px;
+  padding: 30px 50px;
+  background: white;
+  border: 1px solid $main-blue;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.spinErrorText {
+  width: 450px;
+}
+
+%icon {
+  @include fontSize(xl);
+
+  vertical-align: top;
+  display: inline-block;
+
+  color: $main-blue;
+}
+
+.libraryTitle {
+  display: flex;
+}
+
+.editBtn {
+  padding: 0;
+  margin-left: 8px;
+  height: auto;
+
+  & :global(.anticon) {
+    @include fontSize(md);
+  }
+}
+
+.radioGroup {
+  label{
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.filterTable {
+  width: 240px;
+  :global(.ant-form-item-label){
+    margin-bottom: 0;
+  }
+  :global(.ant-divider-horizontal){
+    margin-top: 0;
+  }
+  :global(.ant-btn) {
+    margin: 0;
+    float: right;
+  }
+}
+.displayName{
+  display: table;
+}
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+}
+.controls > div:nth-child(1) {
+  flex-grow: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.aerisLibraryTable{
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr > td){
+    padding: 5px
+  }
+  :global(.ant-table-header){
+    background-color: #0f2c40;
+  }
+  :global(span.anticon.anticon-up){
+    display: none;
+  }
+}
+
+.aerisLibraryDocumentAccess{
+  &:global(.ant-table-wrapper){
+    box-shadow: 0 0 0;
+    box-shadow: none;
+  }
+  border: solid 0px #0f2c40;
+  min-height: 40vh;
+  margin-top: 0;
+  :global(.ant-table-body) {
+    max-height: 45vh;
+    border: solid 1px #c8d6dd;
+  }
+  :global(.ant-table-thead .ant-table-cell.ant-table-selection-column) {
+    position: absolute;
+    right: -6px;
+  }
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr > td){
+    padding: 3px
+  }
+  :global(.ant-table-tbody > tr.ant-table-row-selected > td) {
+    background-color: unset;
+  }
+  :global(.ant-table-thead .ant-table-cell:not(:first-child)) {
+    border-left: none;
+    padding-right: 20px;
+  }
+  :global(.ant-table-container table > thead > tr:first-child th:last-child),
+  :global(.ant-table table) {
+    border-radius: 0;
+  }
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr > td:first-child) {
+    padding-left: 0px;
+  }
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr.aerisRow.ant-table-row-level-1 > td:nth-child(2)) {
+    padding-left: 20px;
+  }
+  :global(.ant-table-cell-scrollbar) {
+    display: none;
+  }
+  :global(tr.aerisRow.ant-table-row-level-0) {
+    background-color: $blue-1;
+    &:hover,
+    &:nth-child(odd) {
+      background-color: $blue-1;
+    }
+    > td:hover {
+      background-color: $blue-1;
+    }
+  }
+
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr.aerisRow.ant-table-row-level-1 > td:first-child) {
+    padding-left: 30px;
+    font-weight: normal;
+    :global(.ant-checkbox) {
+      margin-left: 0px;
+    }
+  }
+  :global(tr.aerisRow.ant-table-row-level-1) {
+    background-color: $main-white;
+    font-weight: normal;
+    &:hover,
+    &:nth-child(odd) {
+      background-color: $main-white;
+      > td {
+        background-color: $main-white;
+      }
+    }
+  }
+  :global(.ant-table-thead > tr > th){
+    background-color: transparent;
+    color: $main-black;
+    border: none;
+    text-align: right;
+    &:first-child {
+      :global(.ant-table-selection-extra) {
+        display: none;
+      }
+      :global(.ant-checkbox-indeterminate .ant-checkbox-inner::after) {
+        background-color: $main-white;
+      }
+    }
+  }
+}
+
+.warningMessage :global(.ant-message-notice-content) {
+    padding: 40px !important;
+    border: 1px solid #faad14 !important;
+}

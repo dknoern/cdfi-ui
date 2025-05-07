@@ -1,0 +1,100 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.form {
+  color: $main-black;
+
+  :global(.ant-col.ant-form-item-label > label) {
+    @include fontWeight(medium);
+  }
+
+  :global(.ant-input.ant-input-disabled) {
+    background-color: $blue-1;
+    border-color: transparent;
+    color: $main-black;
+  }
+
+  :global(.ant-form-item-control-input-content > textarea) {
+    resize: none;
+  }
+
+  :global(.ant-radio-wrapper) {
+    display: block;
+    line-height: 30px;
+
+    & > span {
+      color: $main-black;
+      white-space: normal;
+    }
+  }
+
+  input:read-only,
+  textarea:read-only {
+    background-color: $grey-1;
+    color: $grey-5;
+    cursor: not-allowed;
+  }
+}
+
+.formLabel {
+  padding: $padding-form-modal-label;
+}
+
+.history {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.historyInfo {
+  margin: 10px 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  span.name {
+    @include fontWeight(medium);
+
+    margin-right: 5px;
+  }
+
+  span.time {
+    @include fontSize(sm);
+  }
+
+  span.highlighted {
+    color: $main-light-blue;
+  }
+}
+
+.row {
+  margin-bottom: $grid-gutter;
+
+  :global(.ant-input.ant-input-disabled) {
+    background-color: $blue-1;
+    border-color: transparent;
+    color: $main-black;
+  }
+}
+
+.label {
+  @include fontWeight(medium);
+
+  display: block;
+  padding: $padding-form-modal-label;
+  color: $main-black;
+}
+
+.numberInput {
+  width: 100%;
+  border: 1px solid $grey-5;
+
+  &::placeholder {
+    color: $grey-5;
+  }
+}

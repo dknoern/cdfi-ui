@@ -1,0 +1,67 @@
+@import 'colors';
+
+.tag {
+  margin: 2px;
+}
+
+.innerCardStyle {
+  width: '95%';
+  min-width: 200;
+  margin: 10;
+}
+
+.noData {
+  font-style: italic;
+  color: $grey-5;
+  font-weight: 300;
+}
+
+.organizationDashboard {
+  strong {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  :global(.ant-card) {
+    border: solid 1px $grey-4;
+  }
+}
+
+.accountStatus {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  z-index: 1;
+  font-size: 14px;
+  span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ccc;
+    &.on {
+      background-color: #64b216;
+    }
+  }
+  &.accountStatusContacts {
+    left: 5px;
+    top: 10px;
+  }
+}
+
+.preferencesCard {
+  :global(.anticon) {
+    margin-top: -3px;
+    margin-right: 3px;
+    vertical-align: 0.1em;
+  }
+  :global(.anticon-close) {
+    color: $main-red;
+  }
+  :global(.anticon-check) {
+    color: $main-light-blue;
+  }
+  :global(.ant-typography) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'colors';
+
+.lightBlue {
+  color: $main-light-blue;
+}
+
+.checkmark_green {
+  color: #008000
+}
+
+.lightGrey {
+  color: #a0a0a0;
+}
+
+.archivedNameAligned {
+  margin-left: 18px;
+  color: #a0a0a0;
+}
+
+.ellipsis {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  line-height: 1;
+  padding: 0 8px;
+  color: $main-light-blue;
+}

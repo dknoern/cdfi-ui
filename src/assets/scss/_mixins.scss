@@ -1,0 +1,37 @@
+@mixin Icon {
+  vertical-align: middle;
+}
+
+@mixin breakpoint($size) {
+  @if $size == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@mixin textEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin maxLines($num_lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $num_lines;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,15 @@
+{
+  "short_name": "CDFI Cloud App",
+  "name": "CDFI Cloud App",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#226C8B",
+  "background_color": "#ffffff"
+}

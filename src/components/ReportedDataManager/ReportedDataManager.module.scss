@@ -1,0 +1,94 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+.footer {
+  button + button {
+    margin-left: $grid-gutter;
+  }
+
+  .cancelBtn {
+    border-color: $main-blue;
+    color: $main-blue;
+  }
+
+  .actionBtn {
+    border-color: $main-green;
+    background-color: $main-green;
+  }
+}
+
+// input cells
+.input {
+  margin-bottom: 0;
+}
+
+.numberInput {
+  width: 100%;
+  border: 1px solid $grey-5;
+
+  &::placeholder {
+    color: $grey-5;
+  }
+}
+
+// for request manager window
+.requestManModal {
+  :global(.ant-modal-footer) {
+    padding: $grid-gutter;
+  }
+}
+
+.cancelBtn {
+  border-color: $main-blue;
+  color: $main-blue;
+}
+
+.approveBtn {
+  border-color: $main-green;
+  background-color: $main-green;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($main-green, 0.8);
+    border-color: $main-green;
+  }
+}
+
+.declineBtn {
+  border-color: $main-red;
+  background-color: $main-red;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($main-red, 0.8);
+    border-color: $main-red;
+  }
+}
+
+.toggleModalButton {
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  background: none;
+}
+
+.buttonIcon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+.periodHeaderCell {
+  display: flex;
+  justify-content: space-between;
+
+  .button {
+    height: 22px;
+    color: $main-white;
+
+    :global(.anticon) {
+      @include Icon;
+    }
+  }
+}

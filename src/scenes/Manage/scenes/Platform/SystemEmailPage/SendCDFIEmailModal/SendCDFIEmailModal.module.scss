@@ -1,0 +1,39 @@
+@import 'fonts';
+@import 'colors';
+
+.wrapperCloseModal {
+  z-index: 1400;
+}
+
+.wrapperModal {
+  padding: 20px;
+  text-align: center;
+
+  .title {
+    font-size: 26px;
+    color: $main-light-blue;
+  }
+
+  .text {
+    padding-top: 15px;
+
+    span {
+      color: $main-red;
+      @include fontSize('lg');
+      @include fontWeight(medium);
+    }
+  }
+
+  .button {
+    height: inherit !important;
+    margin-top: 50px;
+    padding: 3px 23px;
+    background: $main-red;
+    font-size: 18px;
+    color: $main-white;
+
+    +.button {
+      margin-left: 16px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.allUsersWrapper {
+  :global(.ant-table-tbody > tr > td) {
+    padding: 10px 12px;
+  }
+
+  :global(.ant-table-pagination.ant-pagination) {
+    margin: 16px 10px;
+  }
+}
+
+.tableSearchBar {
+  margin-bottom: 25px;
+}
+
+.resetPasswordBtn {
+  color: #e74c3c;
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+
+.accountStatus {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  z-index: 1;
+  font-size: 14px;
+
+  span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ccc;
+
+    &.on {
+      background-color: #64b216;
+    }
+  }
+
+  &.accountStatusContacts {
+    left: 5px;
+    top: 10px;
+  }
+}

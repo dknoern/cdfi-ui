@@ -1,0 +1,54 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+$boston-blue: #3c95bb;
+
+%truncateText {
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.header {
+  margin-bottom: $grid-gutter;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  @extend %truncateText;
+  @include fontWeight(medium);
+  @include fontSize(xl);
+  @include font-title;
+
+  line-height: 28px;
+  color: $main-black;
+}
+
+.description {
+  @include fontSize(lg);
+
+  line-height: $grid-gutter;
+}
+
+.btnIcon {
+  color: $main-light-blue;
+  margin-left: 10px;
+
+  &:global(.anticon) {
+    @include fontSize(xl);
+    @include Icon;
+  }
+}
+
+.deleteButton {
+  @include fontSize(md);
+
+  display: flex;
+  align-items: center;
+}

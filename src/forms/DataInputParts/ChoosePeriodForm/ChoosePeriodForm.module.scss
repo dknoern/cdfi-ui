@@ -1,0 +1,9 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.label {
+  @include fontWeight(medium);
+
+  color: $main-black;
+}

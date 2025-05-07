@@ -1,0 +1,122 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  height: 3rem;
+  background-color: #f6f8fa;
+  color: #556065;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .terms {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    .link {
+      color: #556065;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .contactContainer {
+      display: flex;
+      gap: .1rem;
+      .mailIcon {
+        color: #556065;
+        transform: translateY(-.2rem);
+      }
+    }
+
+    .wrapperActionSupportButton {
+      display: flex;
+
+      svg {
+        margin-top: 3px;
+      }
+
+      .actionSupportButton {
+        padding: 0;
+        color: #556065;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: underline;
+        border: none;
+        background: none;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1320px) {
+    .terms {
+      width: 40%;
+      .link {
+        font-size: xx-small;
+      }
+      .contactContainer {
+        gap: .05rem;
+        .mailIcon {
+          transform: translateY(-.1rem);
+        }
+      }
+    }
+    .copyright {
+      font-size: xx-small;
+    }
+  }
+  @media screen and (max-width: 1555px) {
+    .terms {
+      width: 25%;
+     }
+  }
+}
+
+.modalWrap {
+  :global(.ant-typography) {
+    @include fontSize(sm);
+  }
+
+  :global(.ant-modal-header) {
+    padding: $grid-gutter;
+    border-bottom: 1px solid $main-white;
+  }
+
+  :global(.ant-modal-title) {
+    @include fontSize(xl);
+    @include font-title;
+
+    color: $main-light-blue;
+  }
+
+  :global(.ant-modal-body) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  :global(.ant-modal-footer) {
+    padding: $grid-gutter;
+  }
+}
+
+.cancelBtn, .acceptBtn, .revPrivBtn {
+  border-color: $main-blue;
+  color: $main-blue;
+}
+
+.acceptBtn {
+  margin-right: 1.5rem;
+}
+
+.contentContainer {
+  height: 600px;
+  overflow: auto;
+}
+
+.downloadIcon {
+  margin-left: 1rem;
+  font-size: x-large;
+  color: $main-light-blue;
+}

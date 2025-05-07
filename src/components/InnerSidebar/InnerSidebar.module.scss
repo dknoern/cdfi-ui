@@ -1,0 +1,35 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+$panelWidth: 240px;
+
+.innerSidebar {
+  @include fontSize(md);
+
+  position: fixed;
+  z-index: 1;
+  overflow-y: auto;
+  top: $height-header;
+  bottom: 0;
+  height: auto;
+  width: $panelWidth;
+  min-width: $panelWidth;
+
+  background: $grey-0;
+  transition: margin 0.3s;
+  box-shadow: (0 4px 4px rgba(0, 0, 0, 0.25));
+  line-height: 1em;
+
+  &:not(.active) {
+    margin-left: -$panelWidth;
+    box-shadow: none;
+  }
+}
+
+.container {
+  padding: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}

@@ -1,0 +1,59 @@
+@import 'mixins';
+@import 'colors';
+@import 'fonts';
+
+.tagsDropdown {
+  :global(.ant-select-tree-indent-unit) {
+    width: 10px;
+  }
+
+  :global(.ant-select-tree-switcher.ant-select-tree-switcher-noop) {
+    width: 14px;
+  }
+
+  :global(.anticon) {
+    @include Icon();
+  }
+}
+
+.tagsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+%tag {
+  @include fontSize(md);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  white-space: normal;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.customTag {
+  @extend %tag;
+
+  border-color: $main-red;
+  background-color: $red-2;
+}
+
+.irisTag {
+  @extend %tag;
+
+  border-color: $main-yellow;
+  background-color: $yellow-2;
+}
+
+.sdgTag {
+  @extend %tag;
+
+  border-color: $main-green;
+  background-color: $green-2;
+}

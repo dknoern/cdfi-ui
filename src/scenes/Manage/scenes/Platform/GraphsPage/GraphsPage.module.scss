@@ -1,0 +1,32 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.createGraphBtn {
+  margin: 16px 0;
+  padding: 2px;
+  @include font-title;
+  @include fontWeight(medium);
+  @include fontSize(md);
+  color: $main-light-blue;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.spin {
+  text-align: center;
+  position: absolute;
+  width: 95%;
+}
+
+.spin {
+  animation: signup-response 0.5s 1;
+  -webkit-animation: signup-response 0.5s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s; /* Safari and Chrome */
+  -webkit-animation-fill-mode: forwards;
+}
+

@@ -1,0 +1,234 @@
+@import './colors';
+@import './effects';
+@import './mixins';
+@import './effects';
+@import './fonts';
+@import './vars';
+
+// steps
+.ant-steps-item-title {
+  font-size: 12px;
+  line-height: 18px;
+  padding-right: 32px;
+  padding-bottom: 6px;
+  top: 6px;
+  white-space: normal;
+
+  &::after {
+    left: calc(100% - 16px);
+    top: 9px;
+  }
+}
+
+.ant-steps-item-active {
+  .ant-steps-item-icon {
+    border-width: 2px;
+
+    .ant-steps-icon {
+      top: -2px;
+    }
+  }
+}
+
+.ant-steps-item-process {
+  .ant-steps-item-icon {
+    background: $main-white;
+    border-color: $main-light-blue;
+
+    .ant-steps-icon {
+      color: $main-light-blue;
+    }
+  }
+}
+
+.ant-steps-item-finish {
+  .ant-steps-item-icon {
+    background-color: $main-light-blue;
+    border-width: 2px;
+
+    & > .ant-steps-icon {
+      color: $main-white;
+      top: -3px;
+
+      .anticon {
+        @include Icon();
+      }
+    }
+  }
+}
+
+.ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title::after {
+  background-color: $grey-5;
+}
+
+.ant-steps-item-process,
+.ant-steps-item-finish {
+  &
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-title {
+    color: $main-light-blue;
+  }
+}
+
+.ant-steps-item-icon {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 28px;
+  font-size: 12px;
+}
+
+// form parts
+.ant-form-large .ant-form-item-label > label {
+  height: unset;
+}
+
+.ant-form-item-label > label {
+  height: unset;
+}
+
+.ant-col-24.ant-form-item-label {
+  padding-bottom: 8px;
+}
+
+.ant-checkbox-inner {
+  border-radius: 2px;
+  border: 1px solid $main-light-blue;
+}
+
+// table
+.ant-table-wrapper {
+  box-shadow: $card-box-shadow;
+}
+
+.ant-table {
+  line-height: 22px;
+  color: $main-black;
+}
+
+.ant-table-thead {
+  & > tr > th {
+    @include fontWeight(normal);
+
+    padding: 10px 12px;
+  }
+
+  .ant-table-cell {
+    &:not(:first-child) {
+      border-left: 1px solid $main-blue;
+    }
+  }
+
+  .ant-table-row-expand-icon-cell + .ant-table-cell {
+    border-left: none;
+  }
+}
+
+.ant-table-filter-trigger-container-open .ant-table-filter-trigger {
+  color: $main-white;
+
+  &:hover {
+    color: $main-white;
+  }
+}
+
+.ant-table-tbody {
+  & > tr {
+    border-left: 1px solid $grey-4;
+    border-right: 1px solid $grey-4;
+
+    &.ant-table-row:hover > td {
+      background: $main-white;
+    }
+
+    &:nth-child(odd) {
+      background-color: $blue-1;
+
+      & .ant-table-cell-fix-left {
+        background-color: $blue-1;
+      }
+
+      &.ant-table-row:hover > td {
+        background: $blue-1;
+      }
+
+      & .ant-table-column-sort,
+      &.ant-table-row-selected > td {
+        background-color: $blue-1;
+      }
+    }
+
+    & > td {
+      padding: 20px 12px;
+      border-top: 1px solid $grey-4;
+      border-bottom: 1px solid $grey-4;
+
+      &.ant-table-column-sort {
+        background-color: $main-white;
+      }
+    }
+  }
+}
+.ant-table.ant-table-small .ant-table-thead .ant-table-column-sorters {
+  padding: 10px 12px;
+}
+.ant-table-thead th.ant-table-column-has-sorters {
+  background: $main-dark-blue;
+  padding: 10px 12px;
+}
+
+.ant-table-column-sorters {
+  padding: 0;
+}
+
+.ant-table-column-sorter-full {
+  line-height: 1;
+}
+
+.ant-table-filter-trigger:hover {
+  color: darken($color: $main-white, $amount: 20%);
+}
+
+.ant-modal-footer button + button {
+  margin-left: $grid-gutter;
+}
+
+// input
+.ant-input,
+.ant-input-number-input {
+  &::placeholder {
+    color: $grey-5;
+  }
+}
+
+// select
+.ant-select-selection-placeholder {
+  color: $grey-5;
+  opacity: 1;
+}
+
+.ant-select-item-option {
+  min-height: 33px;
+}
+
+// date picker
+.ant-picker {
+  & input::placeholder {
+    color: $grey-5;
+  }
+}
+
+// modal
+button.ant-modal-close:focus,
+.ant-modal-close:hover {
+  outline: none;
+}
+
+//message with icon
+.ant-message-notice-content .anticon-check-circle {
+  top: -3px !important;
+}

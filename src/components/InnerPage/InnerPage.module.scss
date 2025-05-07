@@ -1,0 +1,28 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+@import 'mixins';
+
+.title {
+  &:global(.ant-typography) {
+    @include font-title;
+    @include fontWeight(medium);
+    @include fontSize(xl);
+
+    line-height: 28px;
+    color: $main-black;
+    margin-bottom: 0;
+  }
+
+  &.ellipsis {
+    @include textEllipsis;
+  }
+}
+
+.text {
+  @include fontSize(lg);
+
+  margin: 0;
+  line-height: 24px;
+  max-width: 1200px;
+}

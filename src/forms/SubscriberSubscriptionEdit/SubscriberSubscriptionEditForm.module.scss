@@ -1,0 +1,20 @@
+@import 'colors';
+
+.cancelBtn {
+  border-color: $main-blue;
+  color: $main-blue;
+}
+
+.actionBtn {
+  float: right;
+  margin-left: 24px;
+  border-color: $main-green;
+  background-color: $main-green;
+}
+
+.copyLastSubscrptBtn {
+  float: right;
+  margin-top: 30px;
+  border-color: $main-green;
+  background-color: $main-green;
+}

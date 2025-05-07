@@ -1,0 +1,72 @@
+@import 'fonts';
+@import 'colors';
+:global(.ant-table.ant-table-small .ant-table-thead > tr > th) {
+  padding: 6px 12px;
+}
+.frequency {
+  @include fontWeight(medium);
+
+  color: $main-black;
+
+  & > span {
+    margin-right: 5px;
+  }
+}
+
+.description {
+  @include fontSize(md);
+
+  color: $grey-8;
+
+  margin-top: 10px;
+}
+
+.actionButton {
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  background: none;
+}
+
+.actionButtonIcon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+@mixin actionButton {
+
+  display: block;
+}
+.dueTypeOK{
+  font-weight: normal;
+  :global(.anticon) {
+    color: $main-green;
+    @include actionButton;
+  }
+}
+.dueTypeNone{
+  :global(.anticon) {
+    color: #ccc;
+    @include actionButton;
+  }
+}
+.dueTypePastDue{
+  :global(.anticon) {
+    color: $main-red;
+    @include actionButton;
+  }
+}
+
+.dueTypePastDueBlue{
+  :global(.anticon) {
+    color: $main-light-blue;
+    @include actionButton;
+  }
+}
+
+.docExtensionIcon{
+  display: inline-block;
+  margin: 0 5px 0px 0px;
+  vertical-align: bottom;
+  line-height: 24px;
+}

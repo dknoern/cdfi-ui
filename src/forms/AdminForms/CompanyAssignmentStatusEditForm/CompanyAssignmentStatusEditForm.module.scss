@@ -1,0 +1,32 @@
+.flagged {
+  color: var(--bs-red);
+}
+
+.infoRow {
+  margin-bottom: 32px;
+}
+
+.companyName {
+  font-weight: bold;
+}
+
+.inputLabel {
+  flex-direction: column;
+  > div {
+    text-align: left;
+    > label {
+      font-weight: bold;
+    }
+  }
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  width: 100%;
+  margin-top: 12px;
+}

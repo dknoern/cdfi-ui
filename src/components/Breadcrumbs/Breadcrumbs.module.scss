@@ -1,0 +1,24 @@
+@import 'fonts';
+@import 'colors';
+
+.breadcrumb {
+  &:global(.ant-breadcrumb) {
+    > span {
+      @include fontSize(xl);
+      color: $main-black;
+    }
+
+    a {
+      color: $main-blue;
+    }
+
+    > span:last-child {
+      @include fontSize(lg);
+    }
+  }
+
+  > span > :global(.ant-breadcrumb-separator) {
+    @include fontSize(lg);
+    color: $main-black;
+  }
+}

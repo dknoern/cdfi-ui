@@ -1,0 +1,102 @@
+@import 'colors';
+
+.filterWrapper {
+  margin-bottom: 20px;
+
+  .button {
+    margin-left: 10px;
+  }
+}
+
+.nameFile {
+  color: #2084AD;
+
+  &:hover {
+    color: #3f9bba;
+    text-decoration: underline;
+  }
+}
+
+.spin {
+  position: fixed;
+  width: 100%;
+  height: 750px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 100;
+
+  :global(.ant-spin-spinning) {
+    position: relative !important;
+    top: 100px;
+    left: -200px
+  }
+}
+
+.wrapperCloseModal {
+  z-index: 1400;
+}
+
+.wrapperModal {
+  padding: 20px;
+  text-align: center;
+
+  .title {
+    font-size: 20px;
+    color: #2084AD;
+  }
+
+  .item {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .text {
+    padding-top: 15px;
+  }
+
+  .items {
+    padding-top: 30px;
+
+    .itemWrapper {
+      display: flex;
+      gap: 40px;
+      padding-bottom: 10px;
+
+      .itemName {
+        width: 35%;
+        text-align: initial;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #99AAB2;
+      }
+
+      .itemInfo {
+        width: 65%;
+        text-align: initial;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #000000;
+      }
+    }
+  }
+
+  .additionalInfoWrapper {
+    text-align: left;
+    padding-bottom: 10px;
+
+    @mixin action {
+      display: block;
+      position: relative;
+      top: 4px;
+    }
+
+    h3,
+    blockquote {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+  }
+}

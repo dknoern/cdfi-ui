@@ -1,0 +1,7 @@
+@import 'colors';
+
+.table {
+  :global(.ant-table) {
+    color: $main-black;
+  }
+}

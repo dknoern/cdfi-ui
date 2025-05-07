@@ -1,0 +1,36 @@
+# Aeris Cloud User Interface
+
+## Installation
+
+To run development mode you need installed node v.10 and yarn
+
+After cloning the project, run `yarn` in the project root. It will install all dependencies.
+
+Then edit the `.env` file according to your back-end configuration.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Backend
+
+Run cloud 2 backend on port 8080 to serve APIs..
+
+### Prettier code formatter
+
+Project has configured code formatter.
+If You are using Visual Studio Code as your editor, please, follow these steps:
+
+1. Install prettier-vscode extension;
+2. Add `"editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true` to `User` or `Workspace` settings.

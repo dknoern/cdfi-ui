@@ -1,0 +1,22 @@
+@import 'fonts';
+@import 'colors';
+@import 'mixins';
+
+.companyTag {
+  @include fontSize(md);
+
+  line-height: 32px;
+  border: none;
+  color: $main-black;
+  background-color: $blue-1;
+  margin-bottom: 8px;
+
+  :global(.anticon) {
+    @include Icon;
+  }
+}
+
+.buttonSelectAll {
+  width: 100%;
+  text-align: left;
+}

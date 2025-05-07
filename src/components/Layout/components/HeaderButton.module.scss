@@ -1,0 +1,16 @@
+@import 'colors';
+@import 'mixins';
+
+.headerButton {
+  background-color: $blue-1;
+
+  :global(.anticon) {
+    @include Icon;
+
+    color: $main-blue;
+  }
+}
+
+.notificationsBtn {
+  padding: 0;
+}

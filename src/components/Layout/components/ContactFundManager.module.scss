@@ -1,0 +1,62 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+.trigger {
+  padding: 0;
+  color: $main-black;
+
+  :global(.anticon) + span {
+    margin: 0 16px;
+  }
+
+  span + :global(.anticon) {
+    @include fontSize(xs);
+    @include Icon;
+
+    color: $grey-5;
+    margin-left: 0;
+  }
+
+  .phoneIcon {
+    font-size: 18px;
+    vertical-align: 1px;
+  }
+}
+
+.overlay {
+  &:global(.ant-popover-placement-bottom) {
+    padding-top: 0;
+  }
+
+  :global(.ant-popover-arrow) {
+    visibility: hidden;
+  }
+
+  :global(.ant-popover-inner-content) {
+    padding: 8px 16px;
+  }
+}
+
+.contactsList {
+  @include fontSize(sm);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 240px;
+  word-break: break-all;
+
+  li:not(:first-child) {
+    margin-top: 15px;
+  }
+
+  .company {
+    @include fontWeight(semi-bold);
+  }
+
+  .email {
+    color: $main-blue;
+    text-decoration: underline;
+  }
+}

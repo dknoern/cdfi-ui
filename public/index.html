@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#05425C" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>CDFI Cloud</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/react-quill@1.3.3/dist/react-quill.js"></script>
+    <script src="https://code.highcharts.com/4.0.1/highcharts.js"></script>
+    <style>
+      #ieBlocker {
+        display: none;
+      }
+    </style>
+    <script>
+      function addCSSbyURI(uri) {
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('type', 'text/css');
+        link.setAttribute('href', uri);
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      var ua = window.navigator.userAgent;
+
+      if (ua.indexOf('MSIE ') >= 0 || ua.indexOf('Trident/') >= 0) {
+        var classString = document.documentElement.className;
+        document.documentElement.className = classString.concat(' ie');
+        addCSSbyURI(
+          'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css',
+        );
+        addCSSbyURI('%PUBLIC_URL%/ieblocker.css');
+      }
+    </script>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="ieBlocker">
+      <div class="R container-fluid login-page">
+        <div class="row">
+          <div class="col">
+            <div class="row p0">
+              <div class="col-sm-1 col-lg-2 col-xl-3"></div>
+
+              <div class="col">
+                <div class="row">
+                  <div class="col p64 center-this">
+                    <img
+                      src="%PUBLIC_URL%/aeris-atlas-logo-white.svg"
+                      height="32"
+                      alt=""
+                      class="logo"
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <form class="col login-box" method="post">
+                    <div class="row">
+                      <div
+                        class="M col CDFIblue-text headline-text center-this"
+                      >
+                        <p>
+                          <strong>You are using an outdated browser.</strong>
+                        </p>
+                        <p>
+                          Aeris Atlas is supported by only modern browsers like
+                          Chrome, Safari, Mozilla Firefox.
+                        </p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="row">
+                  <div class="RL col p0 below-login-box-left">
+                    &copy; CDFI Insight. &nbsp;All Rights Reserved
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-1 col-lg-2 col-xl-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

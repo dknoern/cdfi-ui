@@ -1,0 +1,28 @@
+@import 'fonts';
+@import 'colors';
+
+.semiBoldFont {
+  @include fontWeight(semi-bold);
+}
+
+.titleContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.smallMarginTop {
+  margin-top: 0.3em;
+}
+
+.lightGray {
+  color: rgb(144, 133, 133);
+}
+
+.lightBlue {
+  color: $main-light-blue;
+}
+
+.toggleLabel {
+  display: flex;
+  gap: 4px;
+}

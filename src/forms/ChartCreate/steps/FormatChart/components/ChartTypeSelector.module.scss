@@ -1,0 +1,46 @@
+@import 'fonts';
+@import 'colors';
+@import 'effects';
+
+:global(.ant-radio-group) {
+  :global(.ant-radio-button-wrapper) {
+    &.chartTypeButton {
+      height: 128px;
+      width: 128px;
+      padding: 9px;
+
+      &:global(.ant-radio-button-wrapper-checked) {
+        box-shadow: $card-box-shadow;
+      }
+    }
+  }
+}
+
+%chartDescription {
+  display: block;
+  color: $main-black;
+}
+
+.label {
+  @extend %chartDescription;
+
+  @include fontSize(sm);
+  @include fontWeight(medium);
+
+  line-height: 20px;
+}
+
+.description {
+  @extend %chartDescription;
+
+  @include fontSize(xs);
+
+  line-height: 18px;
+}
+
+.iconWrapper {
+  display: flex;
+  margin-top: 6px;
+  justify-content: center;
+  height: 60px;
+}

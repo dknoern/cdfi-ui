@@ -1,0 +1,19 @@
+@import 'fonts';
+@import 'colors';
+
+.text1,
+.text2 {
+  color: $main-dark-blue;
+}
+
+.text1 {
+  @include fontWeight(medium);
+
+  margin-bottom: 8px;
+}
+
+.text2 {
+  span {
+    @include fontWeight(medium);
+  }
+}

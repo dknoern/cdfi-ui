@@ -1,0 +1,7 @@
+@import 'vars';
+
+:global(.ant-form-item) {
+  &.formItem {
+    margin-bottom: calc($grid-gutter / 3);
+  }
+}

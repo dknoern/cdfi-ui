@@ -1,0 +1,17 @@
+@import 'fonts';
+@import 'colors';
+
+.title {
+  &:global(.ant-typography) {
+    @include fontSize(xl);
+    @include fontWeight(medium);
+  }
+}
+
+.description {
+  @include fontSize(lg);
+
+  &:global(.ant-typography.ant-typography-secondary) {
+    color: $grey-8;
+  }
+}

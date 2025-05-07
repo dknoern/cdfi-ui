@@ -1,0 +1,6 @@
+@import 'fonts';
+
+.label {
+  @include fontWeight(semi-bold);
+  margin-bottom: 8px;
+}

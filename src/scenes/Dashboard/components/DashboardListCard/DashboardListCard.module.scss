@@ -1,0 +1,75 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import 'effects';
+@import 'mixins';
+
+$color--grey-local: #66788a;
+
+.table {
+  word-break: break-word;
+
+  :global(.ant-pagination-options) {
+    padding-right: 16px;
+  }
+}
+
+.listCard {
+  margin-bottom: 20px;
+
+  :global(.ant-card-body) {
+    padding: 0;
+  }
+}
+
+.listCardTitle {
+  :global(button){
+    @include fontWeight(normal);
+
+    margin: $grid-gutter calc($grid-gutter/2);
+    color: $main-light-blue;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+// tags block
+.tagsRow {
+  :global(.ant-list-item) {
+    @include fontSize(sm);
+
+    padding: 0;
+    color: $main-black;
+    line-height: 14px;
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+}
+
+.noTags {
+  @include fontSize(sm);
+
+  color: $color--grey-local;
+}
+
+.tagIcon {
+  @include Icon;
+
+  font-size: 16px;
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+:global(.ant-row) {
+  &.tagWrapper {
+    flex-flow: row nowrap;
+  }
+}

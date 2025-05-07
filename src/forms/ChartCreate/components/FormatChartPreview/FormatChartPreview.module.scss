@@ -1,0 +1,27 @@
+@import 'colors';
+@import 'vars';
+@import 'effects';
+@import 'fonts';
+@import 'mixins';
+
+.container {
+  margin-bottom: 20px;
+}
+
+.chartCard {
+  box-shadow: $card-box-shadow;
+}
+
+.chartBlock {
+  min-height: 435px;
+  width: 100%;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}

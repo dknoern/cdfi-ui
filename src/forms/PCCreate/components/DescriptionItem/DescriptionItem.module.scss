@@ -1,0 +1,21 @@
+@import 'fonts';
+@import 'colors';
+
+.wrapper {
+  margin-bottom: 24px;
+}
+
+.label {
+  @include fontSize(md);
+  @include fontWeight(medium);
+
+  color: $main-black;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.children {
+  @include fontSize(md);
+
+  color: $main-black;
+}

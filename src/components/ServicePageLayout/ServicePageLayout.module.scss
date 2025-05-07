@@ -1,0 +1,88 @@
+@import 'fonts';
+@import 'colors';
+@import 'vars';
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-dark-blue;
+
+  .inner {
+    width: 500px;
+    padding: 48px;
+    border-radius: $border-radius-basic;
+    background: $main-white;
+
+    :global(div.ant-typography) {
+      @include fontSize(lg);
+
+      margin-bottom: $grid-gutter !important;
+      line-height: 24px !important;
+    }
+
+    :global(h1.ant-typography) {
+      @include fontWeight(medium);
+      @include fontSize(xl);
+
+      margin-bottom: 16px;
+    }
+  }
+
+  :global(.ant-form-item) {
+    margin-bottom: 32px;
+
+    &:last-of-type {
+      margin-bottom: 0px;
+
+      :global(.ant-form-item-control-input-content) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+
+    :global(.ant-form-item-label > label) {
+      @include fontSize(lg);
+      @include fontWeight(medium);
+    }
+
+    :global(input) {
+      padding: 9px 12px;
+    }
+
+    :global(.ant-input-password) {
+      padding: 0;
+    }
+
+    :global(.ant-input),
+    :global(.ant-input-password) {
+      border-color: $grey-5;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    :global(.ant-input-suffix) {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      padding: 0;
+    }
+
+    button[type='submit'] {
+      margin-left: 30px;
+      padding: 0 30px;
+    }
+  }
+}

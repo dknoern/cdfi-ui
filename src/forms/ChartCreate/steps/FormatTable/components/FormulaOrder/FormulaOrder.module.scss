@@ -1,0 +1,40 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+.list {
+  border-radius: $border-radius-basic;
+  background: $grey-1;
+  border: 1px solid $grey-3;
+  padding: 4px 0;
+  width: 80%;
+  margin-top: 8px;
+}
+
+.item {
+  padding: 4px 4px 4px 7px;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  word-break: break-word;
+
+  &.dragging {
+    opacity: 0.5;
+  }
+
+  &.isOver {
+    background: $main-blue;
+  }
+
+  &:hover {
+    background-color: rgba($main-light-blue, 0.1);
+  }
+
+  .icon {
+    margin-right: 7px;
+    vertical-align: 45%;
+    min-width: 14px;
+  }
+}

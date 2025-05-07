@@ -1,0 +1,40 @@
+@mixin font-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+$font-weights: (
+  normal: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+);
+@mixin fontWeight($weight) {
+  font-weight: map-get($font-weights, $weight);
+}
+
+$font-sizes: (
+  'xs': 10,
+  'sm': 12,
+  'md': 14,
+  'lg': 16,
+  'xl': 20,
+  'xxl': 28,
+  'xxxl': 32,
+);
+@mixin fontSize($size) {
+  font-size: #{map-get($font-sizes, $size)}px;
+}
+
+@mixin fontCase($case: title) {
+  @if $case == upper {
+    text-transform: uppercase;
+  } @else if $case == lower {
+    text-transform: lowercase;
+  } @else {
+    text-transform: lowercase;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

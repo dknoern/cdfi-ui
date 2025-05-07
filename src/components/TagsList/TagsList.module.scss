@@ -1,0 +1,28 @@
+@import 'colors';
+@import 'mixins';
+
+%tag {
+  margin: 3px;
+  color: $main-black;
+}
+
+.defaultTag {
+  @extend %tag;
+}
+
+.arrowBtn {
+  @extend %tag;
+
+  cursor: pointer;
+
+  & > span {
+    @include Icon;
+    transition: all 0.3s;
+  }
+
+  &.opened {
+    & > span {
+      transform: rotate(180deg);
+    }
+  }
+}

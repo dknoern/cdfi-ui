@@ -1,0 +1,52 @@
+@import 'colors';
+@import 'fonts';
+
+$panelWidth: 240px;
+
+.addMetricButton {
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  background: none;
+}
+
+.addMetricButtonIcon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+.pageSection {
+  padding: 24px;
+  flex: 1;
+  transition: margin 0.3s;
+
+  &.open {
+    margin-left: $panelWidth;
+  }
+}
+
+.sectionWrapper {
+  display: flex;
+  margin: -24px;
+}
+
+.searchInput {
+  margin-bottom: 10px;
+}
+
+.pageTitleBlock {
+  > span {
+    margin-right: 12px;
+  }
+
+  button {
+    padding: 0 4px;
+    vertical-align: top;
+    height: 28px;
+    line-height: 28px;
+
+    span {
+      vertical-align: 20%;
+    }
+  }
+}

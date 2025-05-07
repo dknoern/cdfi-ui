@@ -1,0 +1,54 @@
+@import 'vars';
+@import 'colors';
+
+.table {
+  :global(.ant-table-thead) {
+    th {
+      border-right: 1px solid $main-blue;
+      padding: 0 12px;
+    }
+  }
+
+  :global(.ant-table-thead),
+  :global(.ant-table-body) {
+    th:first-child,
+    td:first-child {
+      padding-left: 24px;
+    }
+  }
+
+  :global(.ant-table-column-sorters) {
+    padding: 10px 6px;
+  }
+
+  :global(.ant-table-footer) {
+    padding: $grid-gutter;
+  }
+}
+
+%catRow {
+  background-color: $main-light-blue;
+  color: $grey-0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  :global(.ant-table-row-expand-icon) {
+    color: $main-light-blue;
+  }
+}
+
+:global(.ant-table-tbody) > tr:global(.ant-table-row) {
+  &.catRow:nth-child(n),
+  &.subCatRow:nth-child(n) {
+    & > td,
+    &:hover > td {
+      @extend %catRow;
+    }
+  }
+}
+
+.catRow td,
+.subCatRow td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

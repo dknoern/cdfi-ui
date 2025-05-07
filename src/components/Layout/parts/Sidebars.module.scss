@@ -1,0 +1,304 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import '../shared/localVars';
+
+$triggerHeight: 66px;
+$scrollShadowHeight: 27px;
+
+%scrollShadow {
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  height: $scrollShadowHeight;
+}
+
+.sider1 {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 5;
+  background: $main-dark-blue;
+  overflow-x: hidden;
+  box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.25);
+
+  .logoContainer {
+    text-align: center;
+  }
+
+  .content {
+    height: 100%;
+
+    &Default {
+      width: $sidebar1Width;
+      display: flex;
+      flex-direction: column;
+
+      .logoContainer {
+        transition: all $transitionDuration;
+
+        img {
+          width: 192px;
+          height: auto;
+          margin: 30px auto 0;
+        }
+      }
+
+      &:global(.ant-menu-dark) {
+        background-color: $main-dark-blue;
+      }
+    }
+
+    &Collapsed {
+      display: flex;
+      flex-direction: column;
+      width: $sidebar1CollapsedWidth;
+      padding-top: 20px;
+
+      .logoContainer {
+        padding-bottom: 32px;
+
+        svg {
+          width: 24px;
+          height: 20px;
+          fill: $main-light-blue;
+        }
+      }
+
+      .siderButton {
+        text-align: center;
+
+        .text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .triggerContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    button {
+      width: 72px;
+      height: $triggerHeight;
+    }
+
+    svg {
+      width: 18px;
+      height: 12px;
+      fill: white;
+      transition: transform $transitionDuration;
+    }
+  }
+}
+
+.sider1Content {
+  display: flex;
+  width: $sidebar1Width + $sidebar1CollapsedWidth;
+  transition: transform $transitionDuration;
+  height: 100%;
+}
+
+.scrollableContentWrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    @extend %scrollShadow;
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 43, 62, 1) 0%,
+      rgba(0, 43, 62, 0) 100%
+    );
+  }
+
+  &::after {
+    @extend %scrollShadow;
+
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 43, 62, 1) 0%,
+      rgba(0, 43, 62, 0) 100%
+    );
+  }
+}
+
+.scrollableContent {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: $scrollShadowHeight 0;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+.sider2 {
+  background: white;
+  position: fixed;
+  z-index: 3;
+  top: $headerHeight;
+  bottom: 0;
+  left: $sidebar1Width;
+  transition: left $transitionDuration;
+  box-shadow: inset -1px 0px 0px rgba(0, 0, 0, 0.15);
+
+  .buttons {
+    @include fontSize(sm);
+
+    list-style: none;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 26px;
+
+    li {
+      display: block;
+      max-width: 78px;
+      margin-left: auto;
+      margin-right: auto;
+
+      a {
+        display: block;
+      }
+
+      &:not(:first-child) {
+        margin-top: 26px;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+    }
+
+    a {
+      color: $main-black;
+      fill: $main-black;
+
+      &:hover {
+        color: $main-light-blue;
+        fill: $main-light-blue;
+      }
+
+      &.active {
+        color: $main-light-blue;
+        fill: $main-light-blue;
+      }
+    }
+  }
+}
+
+.menuTrigger {
+  @include fontSize(xl);
+
+  background: transparent;
+  color: white;
+  border: 0;
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  cursor: pointer;
+  padding: 0 $grid-gutter;
+  text-align: left;
+
+  :global(.anticon) {
+    vertical-align: baseline;
+  }
+
+  .text {
+    @include fontSize(lg);
+
+    display: inline-block;
+    margin-left: 9px;
+  }
+
+  &:hover,
+  &.isActive {
+    color: $main-light-blue;
+    background-color: rgba($color: $main-light-blue, $alpha: 0.2);
+    border-right: 4px solid $main-light-blue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.menuOverlay {
+  padding: 0;
+  width: $sidebar1Width;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &:global(.ant-popover-placement-rightTop) {
+    left: 66px !important;
+  }
+
+  :global(.ant-popover-arrow) {
+    display: none;
+  }
+
+  :global(.ant-popover-inner-content) {
+    padding: 0;
+    color: white;
+    background-color: $main-light-blue;
+  }
+}
+
+.collapsedContent {
+  position: absolute;
+  top: 0;
+  left: $sidebar1Width;
+  right: 0;
+  padding-top: 20px;
+  text-align: center;
+  transition: all $transitionDuration;
+}
+
+:global(.sidebar-collapsed) {
+  .sider1 {
+    .triggerContainer svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .sider1Content {
+    transform: translateX(-$sidebar1Width);
+  }
+
+  .sider2 {
+    left: $sidebar1CollapsedWidth;
+  }
+}
+
+.utilityBlock {
+  margin-bottom: calc($triggerHeight / 1.5);
+}
+
+.menuTitle {
+  @include font-title;
+  @include fontWeight(semi-bold);
+
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 20px 24px 0;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  transition: transform $transitionDuration;
+}

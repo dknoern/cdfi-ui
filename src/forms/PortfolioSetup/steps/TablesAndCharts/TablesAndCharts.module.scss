@@ -1,0 +1,17 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.table {
+  :global(.ant-table-column-sorters) {
+    padding: 10px 6px;
+  }
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}

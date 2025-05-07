@@ -1,0 +1,80 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+.sourceCell {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  border: 1px solid #e0e1e3;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+
+  &:hover {
+    background: #f9f9f9;
+    overflow: visible;
+    height: auto;
+    min-height: 100%;
+    z-index: 2;
+  }
+
+  &IsLabel {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: #1094e9;
+      border-radius: 10px;
+      width: 4px;
+    }
+  }
+
+  &IsValue {
+    &::after {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      content: 'VALUE';
+      padding: 2px 8px;
+      text-align: center;
+      background: rgba(16, 148, 233, 0.12);
+      right: 0;
+      bottom: 0;
+      top: 26px;
+      font-weight: 500;
+      font-size: 11px;
+      color: #1094e9;
+    }
+  }
+
+  &IsDragging {
+    opacity: 0.4;
+  }
+
+  &HasError {
+    border: 2px solid $main-red;
+
+    &:hover {
+      border: 2px solid $main-red;
+    }
+  }
+
+  .value {
+    @include textEllipsis;
+  }
+}
+
+.icon {
+  @include fontSize(lg);
+
+  position: relative;
+  bottom: 4px;
+  left: 2px;
+  vertical-align: 2px;
+  color: $main-red;
+}

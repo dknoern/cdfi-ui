@@ -1,0 +1,25 @@
+@import 'fonts';
+@import 'colors';
+
+.subItem {
+  :global(.ant-form-item-label) {
+    padding: 0 0 4px;
+  }
+}
+
+.smallLabel {
+  @include fontSize(sm);
+
+  margin-bottom: 0;
+}
+
+:global(.ant-form-item .ant-input-group .ant-select) {
+  &.quarterSelect {
+    width: 50%;
+  }
+}
+
+.yearInput {
+  width: 50%;
+  border-color: $grey-5;
+}

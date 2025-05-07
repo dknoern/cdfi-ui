@@ -1,0 +1,54 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+.createNewBtn {
+  @include fontSize(md);
+
+  border-color: $main-blue;
+  color: $main-blue;
+}
+
+.title {
+  @include fontWeight(medium);
+}
+
+:global(div.ant-typography) {
+  &.titleHint {
+    @include fontSize(lg);
+
+    margin-bottom: 48px;
+  }
+
+  &.tableControlsTitle {
+    @include fontWeight(medium);
+    @include fontSize(lg);
+
+    color: $main-black;
+    margin-bottom: 12px;
+  }
+}
+
+.select {
+  width: 100%;
+}
+
+.selectDropdown {
+  :global(.ant-select-item-group) {
+    @include fontWeight(medium);
+
+    color: $main-black;
+    padding: 4px 20px;
+  }
+
+  :global(.ant-select-item) {
+    @include fontSize(sm);
+
+    padding: 4px 20px;
+  }
+
+  :global(.ant-select-item-option-active:not(.ant-select-item-option-disabled)) {
+    color: $main-blue;
+    background-color: transparentize($main-light-blue, 0.9);
+  }
+}

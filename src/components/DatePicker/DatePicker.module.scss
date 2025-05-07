@@ -1,0 +1,12 @@
+@import 'mixins';
+
+.datePicker {
+  width: 100%;
+
+  :global(.ant-picker-suffix),
+  :global(.ant-picker-clear) {
+    :global(.anticon) {
+      @include Icon();
+    }
+  }
+}

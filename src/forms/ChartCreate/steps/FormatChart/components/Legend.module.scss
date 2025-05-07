@@ -1,0 +1,19 @@
+@import 'fonts';
+@import 'fonts';
+
+%select-part {
+  @include fontSize(sm);
+  @include fontCase;
+}
+
+.select {
+  :global(.ant-select-selection-item) {
+    @extend %select-part;
+  }
+}
+
+.selectOption {
+  :global(.ant-select-item-option-content) {
+    @extend %select-part;
+  }
+}

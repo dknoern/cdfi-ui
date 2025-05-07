@@ -1,0 +1,28 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.container {
+  height: 400px;
+  width: 80vw;
+  margin: $grid-gutter $grid-gutter;
+}
+
+.table :global {
+  .ant-table-thead .ant-table-cell {
+    color: $main-white;
+    background-color: $main-blue;
+    padding-left: 12px;
+  }
+}
+
+.lightBlueOverRide {
+  color: $main-light-blue !important;
+}
+
+.titleContainer {
+  margin: 12px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}

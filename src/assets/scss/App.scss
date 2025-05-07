@@ -1,0 +1,219 @@
+@import 'colors';
+@import 'vars';
+@import '../css/aeris-2019.css';
+
+html,
+div {
+  scrollbar-width: thin;
+  scrollbar-color: $grey-5 $grey-2;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+#root {
+  height: 100%;
+}
+
+.main-content-col {
+  transition: padding-left 0.3s ease;
+  padding-left: 84px;
+
+  &.expanded {
+    padding-left: 280px;
+  }
+}
+
+.left-menu-layout {
+  width: 84px;
+  transition: width 0.3s ease;
+
+  &.expanding {
+    width: 280px;
+  }
+
+  &.expanded {
+    width: 280px;
+
+    #copyright {
+      display: block;
+    }
+  }
+
+  #copyright {
+    display: none;
+  }
+}
+
+.qs-select {
+  border-radius: 18px !important;
+}
+
+.subheader {
+  display: flex;
+
+  & > * {
+    float: none;
+  }
+
+  img {
+    margin-left: 10px;
+    vertical-align: 0;
+  }
+}
+
+.modal-body-padded {
+  padding: 15px 0;
+}
+
+.tnb-first,
+.tnb-first:hover {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+.tnb-last,
+.tnb-last:hover {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.report-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #f2f2f2;
+  border-bottom: #e2e2e2 1px solid;
+  padding: 0 24px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  height: unset;
+  width: unset;
+  background: transparent;
+  border: unset;
+  padding: 4px 0;
+}
+
+.btn--fin-export {
+  padding: 0;
+
+  i {
+    margin-right: 0.25rem;
+  }
+}
+
+.modal--input {
+  color: #226c8b;
+}
+
+.perf-graph-item {
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+}
+
+.table-cell {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+
+  &--numeric {
+    text-align: end;
+  }
+
+  &--title {
+    font-weight: 600;
+  }
+
+  &--forecast {
+    color: #008000;
+    font-weight: bold;
+  }
+}
+
+.tableDigitValue {
+  display: inline-block;
+  padding: 4px 8px 4px 8px;
+  border-radius: 6px;
+
+  &--green {
+    background-color: #a2ca4f;
+  }
+
+  &--red {
+    background-color: #be1e2d;
+  }
+
+  &--orange {
+    background-color: #e8ba43;
+  }
+}
+
+.custom-radio.bright
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background-color: #21a9e2;
+}
+.custom-radio.changed
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background-color: #a2ca4f;
+}
+
+.react-grid-Row {
+  &:nth-child(even) {
+    & .react-grid-Cell {
+      background: #f9f9f9;
+    }
+  }
+
+  &:hover {
+    & .react-grid-Cell {
+      background: #dee2e6;
+    }
+  }
+}
+
+.modal {
+  color: #226c8b;
+}
+
+.screenreader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $grey-2;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: $border-radius-basic;
+  background: $grey-5;
+}
+
+// Ant.Design
+@import 'ant.custom';

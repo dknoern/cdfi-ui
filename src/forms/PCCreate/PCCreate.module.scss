@@ -1,0 +1,31 @@
+@import 'colors';
+@import 'mixins';
+
+.tagsDropdown {
+  :global(.ant-select-tree-indent-unit) {
+    width: 10px;
+  }
+
+  :global(.ant-select-tree-switcher.ant-select-tree-switcher-noop) {
+    width: 14px;
+  }
+
+  :global(.anticon) {
+    @include Icon();
+  }
+}
+
+.cat1Tag {
+  border-color: $main-green;
+  background-color: $green-2;
+}
+
+.cat2Tag {
+  border-color: $main-yellow;
+  background-color: $yellow-2;
+}
+
+.cat3Tag {
+  border-color: $main-red;
+  background-color: $red-2;
+}

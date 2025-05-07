@@ -1,0 +1,47 @@
+@import 'colors';
+@import 'vars';
+@import 'fonts';
+
+.wrapper {  
+  .row {
+    flex-wrap: nowrap;
+
+    .colTitle.ellipsis {
+      overflow: hidden;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $grid-gutter;
+  }
+}
+
+:global(h4.ant-typography) {
+  &.sectionTitle {
+    @include font-title;
+    @include fontWeight(medium);
+
+    color: $main-black;
+    margin-bottom: 0;
+  }
+}
+
+.questionCircleIcon {
+  margin-left: 14px;
+  color: $grey-5;
+
+  &:hover {
+    cursor: pointer;
+    color: $main-black;
+  }
+}
+
+h2.topTitle {
+  padding: 10px;
+  color: $main-light-blue !important;
+}
+
+.factSheet {
+  text-align: right;
+  flex-grow: 1;
+}

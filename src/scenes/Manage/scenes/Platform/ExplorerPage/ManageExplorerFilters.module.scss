@@ -1,0 +1,10 @@
+.listContainer {
+  overflow: auto;
+  height: 100%;
+  max-height: calc(80vh - 380px);
+  margin-bottom: 24px;
+}
+
+.checkboxItem {
+  margin-bottom: -6px;
+}

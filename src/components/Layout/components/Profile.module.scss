@@ -1,0 +1,47 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+.profileDropdown {
+  :global(.ant-dropdown-menu-item) {
+    &:hover {
+      background-color: transparentize($color: $main-light-blue, $amount: 0.9);
+    }
+  }
+}
+
+.trigger {
+  padding: 0;
+  color: $main-white;
+
+  .greeting {
+    margin: 0 16px;
+    .name {
+      margin: 0 3px;
+    }
+  }
+
+  .link {
+    margin: 0 8px;
+  }
+
+  span + :global(.anticon) {
+    @include fontSize(xs);
+    @include Icon;
+
+    color: $grey-5;
+    margin-left: 0;
+  }
+}
+
+.trigger:hover {
+  color:  #3f9bba;
+}
+
+.trigger:active, .trigger:focus {
+  color:  $main-white;
+}
+
+.trigger:active:hover, .trigger:focus:hover {
+  color:  #3f9bba;
+}

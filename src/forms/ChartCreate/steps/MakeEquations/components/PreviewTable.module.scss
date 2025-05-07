@@ -1,0 +1,107 @@
+@import 'fonts';
+@import 'colors';
+@import 'vars';
+@import 'mixins';
+
+$list-element-blue: #e1edf2;
+
+.container {
+  margin-top: $grid-gutter;
+  margin-bottom: $grid-gutter;
+}
+
+.previewTableBlock {
+  margin-top: 8px;
+  background: $grey-1;
+  border: 1px solid $grey-3;
+  box-sizing: border-box;
+  border-radius: $border-radius-basic;
+  color: $main-black;
+}
+
+.titleRow {
+  background-color: $main-dark-blue;
+  color: $main-white;
+  border-radius: $border-radius-basic $border-radius-basic 0 0;
+}
+
+.titleCol {
+  padding: 10px 12px;
+
+  &:first-of-type {
+    border-right: 1px solid $main-blue;
+  }
+}
+
+.equationName {
+  padding: 5px 12px;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: $main-black;
+  border-radius: 0;
+
+  span {
+    @include textEllipsis;
+
+    width: 100%;
+    text-align: left;
+  }
+
+  &Chosen,
+  &Chosen:focus {
+    background: $list-element-blue;
+    color: $main-black;
+  }
+
+  &:first-of-type {
+    margin-top: 4px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 4px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $list-element-blue;
+    color: $main-black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.equationFormula {
+  padding: 5px 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.equationNameCol {
+  border-right: 2px solid $grey-3;
+  background-color: $main-white;
+  min-height: 160px;
+  max-height: $max-height-table;
+  overflow-y: auto;
+}
+
+.equationBreakdownCol {
+  background-color: $main-white;
+  max-height: $max-height-table;
+  overflow-y: auto;
+}
+
+.buttonRow {
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  margin-bottom: 16px;
+
+  button {
+    margin-right: 16px;
+  }
+}

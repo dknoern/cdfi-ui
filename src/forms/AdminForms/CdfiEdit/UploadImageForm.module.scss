@@ -1,0 +1,25 @@
+@import 'colors';
+
+.hideDragger {
+  display: none;
+}
+
+.dragger {
+  min-height: 100px;
+}
+
+.draggerSubText {
+  font-size: small;
+  color: lightgray;
+}
+
+.cancelLogoSubmitBtn {
+  border-color: $main-blue;
+  color: $main-blue;
+}
+
+.logoSubmitBtn {
+  border-color: $main-green;
+  background-color: $main-green;
+  color: white;
+}

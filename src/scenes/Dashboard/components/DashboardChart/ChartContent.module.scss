@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.graphContainer {
+  margin: 0 auto;
+  padding: $grid-gutter;
+  padding-left: 0;
+  height: 600px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}

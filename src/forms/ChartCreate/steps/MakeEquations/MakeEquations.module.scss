@@ -1,0 +1,142 @@
+@import 'fonts';
+@import 'colors';
+@import 'vars';
+@import 'mixins';
+
+$list-element-blue: #e1edf2;
+
+%button-common {
+  cursor: pointer;
+  color: $main-black;
+  background: $grey-1;
+
+  &:hover {
+    background-color: rgba($main-light-blue, 0.1);
+    color: $main-black;
+  }
+}
+
+%button {
+  @extend %button-common;
+
+  display: block;
+  padding: 2px 0 2px 12px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-radius: 0;
+  height: auto;
+}
+
+.notationBtn {
+  @extend %button-common;
+
+  width: 54px;
+  height: 54px;
+  margin-top: 8px;
+  border: 1px solid $grey-3;
+  border-radius: $border-radius-basic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: $list-element-blue;
+  }
+}
+
+.listWrapper {
+  margin-top: 8px;
+}
+
+.list {
+  min-height: 180px;
+  background: $grey-1;
+  border: 1px solid $grey-3;
+  box-sizing: border-box;
+  border-radius: $border-radius-basic;
+  color: $main-black;
+  padding: 4px 0;
+
+  button {
+    @extend %button;
+
+    span {
+      @include textEllipsis;
+      display: block;
+    }
+  }
+}
+
+.formItem {
+  &:global(.ant-form-item) {
+    margin-bottom: 0;
+  }
+}
+
+.titleRow {
+  &:global(.ant-row) {
+    margin-bottom: $grid-gutter * 2;
+  }
+}
+
+.functionsCol,
+.metricsCol {
+  &:global(.ant-col) {
+    margin-right: 14px;
+  }
+}
+
+.notationsCol {
+  min-width: 54px;
+
+  &:nth-of-type(odd) {
+    margin-right: 8px;
+  }
+
+  &:global(.ant-col) {
+    &:last-of-type {
+      padding: 0;
+    }
+  }
+}
+
+.equationWrapper {
+  margin-bottom: 30px;
+}
+
+.equationRow {
+  display: flex;
+  margin-bottom: 24px;
+
+  & > :global(.ant-col .ant-form-item-control) {
+    width: 100%;
+    flex: auto;
+  }
+
+  .equationInput {
+    margin-left: 8px;
+  }
+}
+
+.notationsRow {
+  max-width: 120px;
+}
+
+.functionButton {
+  border: none;
+  background: $grey-1;
+  padding-left: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+:global(.ant-tooltip) {
+  &.overlay {
+    :global(.ant-tooltip-inner) {
+      white-space: pre-line;
+    }
+  }
+}

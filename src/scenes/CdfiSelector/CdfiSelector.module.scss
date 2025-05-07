@@ -1,0 +1,134 @@
+@import 'colors';
+@import 'fonts';
+
+.label {
+  @include fontWeight(medium);
+  @include fontSize(md);
+
+  line-height: 22px;
+  span {
+    margin-right: 8px;
+  }
+
+  :global(.anticon) {
+    color: $grey-5;
+    vertical-align: 0.1em;
+  }
+}
+
+.steps {
+  margin-bottom: 12px;
+}
+
+.multiSelect {
+  width: 100% !important;
+  margin-bottom: 8px !important;
+
+  :global(.ant-select-selection-placeholder) {
+    color: $main-light-blue;
+  }
+}
+
+.selectIcon {
+  margin-right: 8px;
+  font-size: x-small;
+  color: $grey-8;
+  position: relative;
+  bottom: 2px;
+}
+
+.lightBlue {
+  color: $main-light-blue;
+}
+
+.placeholderContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableWithChecks {
+  margin-top: -56px;
+}
+
+.hide {
+  display: none;
+}
+
+.buttonNav {
+  margin: 20px 0;
+}
+
+@mixin buttonStyles(
+  $color,
+  $borderColor,
+  $backgroundColor: none,
+  $flexDirection: row-reverse
+) {
+  margin-right: 8px;
+  color: $color;
+  border: 1px solid $borderColor;
+  background: $backgroundColor;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: $flexDirection;
+
+  & > span {
+    margin-bottom: 2px;
+  }
+
+  & > :global(.anticon) {
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+}
+
+.nextButton {
+  @include buttonStyles($main-light-blue, $main-light-blue);
+}
+
+.backButton {
+  @include buttonStyles($main-light-blue, $main-light-blue, none, row);
+}
+
+.cancelButton,
+.resetAllFiltersButton {
+  @include buttonStyles($grey-8, $grey-8);
+}
+
+.saveButton {
+  @include buttonStyles($main-white, $main-green, $main-green);
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.customCollapseItem :global(.ant-collapse-item) {
+  padding-left: -4px;
+  border: 1px solid rgba(158, 160, 165, 0.85);
+  background-color: white;
+  margin-bottom: 8px;
+  border-radius: 4px;
+
+  & > div > span > svg {
+    height: 10px;
+  }
+}
+
+.customCollapseItem :global(.ant-collapse-item:first-child),
+.customCollapseItem :global(.ant-collapse-item:last-child) {
+  border-radius: 4px;
+}
+
+.lightBlue {
+  color: $main-light-blue;
+}
+
+.marginBottom16 {
+  margin-bottom: 16px;
+}
+
+.marginBottomHalfEm {
+  margin-bottom: 0.5em;
+}

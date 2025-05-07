@@ -1,0 +1,48 @@
+@import 'vars';
+@import 'effects';
+@import 'colors';
+@import 'fonts';
+
+.pageTitle {
+  &:global(.ant-typography) {
+    @include fontSize(xl);
+    @include fontWeight(medium);
+
+    margin-bottom: 12px;
+  }
+}
+
+.pageIntro {
+  @include fontSize(lg);
+
+  margin-bottom: $grid-gutter;
+
+  &:global(.ant-typography.ant-typography-secondary) {
+    color: $grey-8;
+  }
+}
+
+.tab {
+  box-shadow: $card-box-shadow;
+}
+
+.tableIntro {
+  margin: 24px auto 16px;
+  color: black;
+}
+
+.tabs {
+  height: auto;
+
+  :global(.ant-tabs-bar) {
+    margin-bottom: 0;
+  }
+
+  :global(.ant-tabs-tab) {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  :global(.ant-tabs-nav-scroll) {
+    padding-top: 16px;
+  }
+}

@@ -1,0 +1,38 @@
+image:
+  name: atlassian/default-image:3
+
+pipelines:
+  branches:
+    '{main}':
+      - step:
+          script:
+            - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
+            - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 698473924555.dkr.ecr.us-east-1.amazonaws.com
+            - nvm install 16.0.0
+            - nvm use
+            - node -v
+            - curl -o- -L https://yarnpkg.com/install.sh | bash
+            - source ~/.bashrc
+            - yarn install --frozen-lockfile
+            - yarn audit || [ $? -lt 16 ]
+            - docker build -t cloud2/frontend .
+            - docker tag cloud2/frontend:latest 698473924555.dkr.ecr.us-east-1.amazonaws.com/cloud2/frontend:latest
+            - docker tag cloud2/frontend:latest 698473924555.dkr.ecr.us-east-1.amazonaws.com/cloud2/frontend:${BITBUCKET_BUILD_NUMBER}
+            - docker push 698473924555.dkr.ecr.us-east-1.amazonaws.com/cloud2/frontend:latest
+            - docker push 698473924555.dkr.ecr.us-east-1.amazonaws.com/cloud2/frontend:${BITBUCKET_BUILD_NUMBER}
+            - aws ecs update-service --region us-east-1 --cluster cloud-develop --service frontend --force-new-deployment
+            - aws ecs update-service --region us-east-1 --cluster cloud-qa --service frontend --force-new-deployment
+          services:
+            - docker
+          size: 2x
+  default:
+    - step:
+        script:
+          - docker build -t cloud2/frontend .
+        services:
+          - docker
+        size: 2x
+definitions:
+  services:
+    docker:
+      memory: 6144

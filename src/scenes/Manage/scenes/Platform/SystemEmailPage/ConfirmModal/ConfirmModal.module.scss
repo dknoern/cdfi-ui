@@ -1,0 +1,26 @@
+.wrapperCloseModal {
+  z-index: 1400;
+}
+
+.wrapperModal {
+  padding: 20px;
+  text-align: center;
+
+  .title {
+    font-size: 26px;
+    color: #2084AD;
+  }
+
+  .text {
+    padding-top: 15px;
+  }
+
+  .button {
+    height: inherit !important;
+    margin-top: 50px;
+    padding: 3px 23px;
+    background: #d21a1a;
+    font-size: 18px;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,163 @@
+@import 'vars';
+@import 'colors';
+@import 'mixins';
+
+@mixin with-corner($color) {
+  &::after {
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    content: '';
+    border-top: 10px solid $color;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
+
+@mixin valueContainer {
+  @include textEllipsis;
+
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 12px;
+}
+
+.tableButton {
+  @include valueContainer;
+
+  background: 0;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+
+  .anticon {
+    vertical-align: middle;
+  }
+}
+
+:global(.ant-btn:empty) {
+  &.tableButton {
+    width: 100%;
+    visibility: visible;
+    display: block;
+    content: unset;
+  }
+}
+
+.dataNeededButton {
+  color: $main-red;
+  background-color: $red-2;
+
+  &:hover,
+  &:focus {
+    color: $main-red;
+    background-color: $red-2;
+  }
+}
+
+:global(.ant-table-tbody > tr:nth-child(even) > td) {
+  .dataNeededButton {
+    background-color: $red-1;
+
+    &:hover {
+      background-color: $red-1;
+    }
+  }
+}
+
+.dataButton {
+  background: none;
+
+  &:hover {
+    background: none;
+  }
+}
+
+.dataChangedButton {
+  @include with-corner($main-green);
+}
+
+.withIncomingRequestButton {
+  @include with-corner($main-yellow);
+}
+
+.withOutgoingRequest {
+  @include with-corner($grey-5);
+}
+
+.dataValue {
+  @include textEllipsis;
+  @include maxLines(2);
+
+  width: 100%;
+  white-space: normal;
+  word-break: break-all;
+}
+
+:global(.ant-btn) {
+  .dataValue {
+    display: -webkit-box; // bc ant inner span style rewrited
+  }
+}
+
+.tableButton {
+  &:empty {
+    &::before {
+      display: block;
+      position: static;
+      opacity: unset;
+      background: unset;
+    }
+    &:hover {
+      &::before {
+        content: 'Enter value';
+      }
+    }
+  }
+}
+
+.input {
+  margin-bottom: 0;
+}
+
+.numberInput {
+  width: 100%;
+  border: 1px solid $grey-5;
+
+  &::placeholder {
+    color: $grey-5;
+  }
+}
+
+.disabledContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: not-allowed;
+}
+
+.textMetricCell {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  span {
+    @include textEllipsis;
+
+    width: 100%;
+  }
+}
+
+.nameCellInner {
+  display: flex;
+}

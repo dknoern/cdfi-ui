@@ -1,0 +1,54 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.updatePeerGroupBtn {
+  margin-left: auto;
+  margin-right: 16px;
+  @include font-title;
+  @include fontWeight(medium);
+  @include fontSize(md);
+  color: $main-dark;
+  background: $main-yellow;
+  border: 0;
+  box-shadow: none;
+}
+
+.spin {
+  text-align: center;
+  position: absolute;
+  width: 95%;
+}
+
+.spin {
+  animation: signup-response 0.5s 1;
+  -webkit-animation: signup-response 0.5s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s; /* Safari and Chrome */
+  -webkit-animation-fill-mode: forwards;
+}
+
+.peerGroupsModal {
+  min-height: 600px;
+  max-height: 80vh;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.cdfisWrapper {
+  overflow: auto;
+  height: 100%;
+  max-height: calc(80vh - 380px);
+  margin-bottom: 24px;
+}
+
+.disableFooterButtons {
+  :global(.ant-modal-footer) > button {
+    color: #c8d6dd;
+    border-color: #c8d6dd;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}

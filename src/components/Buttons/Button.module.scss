@@ -1,0 +1,39 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+%icon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+%button {
+  &:global(.ant-btn-icon-only) {
+    vertical-align: 2px;
+  }
+
+  & > :global(.anticon) {
+    @extend %icon;
+  }
+}
+
+.outlinedButton {
+  @extend %button;
+
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  background: none;
+}
+
+.primaryButton {
+  @extend %button;
+}
+
+.linkButton {
+  @extend %button;
+
+  & > :global(.anticon) {
+    @include fontSize(xl);
+  }
+}

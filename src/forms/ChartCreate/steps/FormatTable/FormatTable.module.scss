@@ -1,0 +1,7 @@
+@import 'vars';
+
+.formGroup {
+  &:not(:first-of-type) {
+    margin-top: $grid-gutter;
+  }
+}

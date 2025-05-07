@@ -1,0 +1,105 @@
+@import 'colors';
+@import 'mixins';
+
+.spin {
+  text-align: center;
+  padding: 200px;
+  position: absolute;
+  width: 95%;
+}
+
+.spin {
+  animation: signup-response 0.5s 1;
+  -webkit-animation: signup-response 0.5s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s; /* Safari and Chrome */
+  -webkit-animation-fill-mode: forwards;
+}
+
+.cdfiSelectorTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500 !important;
+}
+
+@keyframes signup-response {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes signup-response {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+
+.table {
+  // :global(.ant-table-thead .ant-table-cell:last-child) {
+  //   border-left: 0;
+  // }
+
+  :global(.ant-pagination-options-size-changer.ant-select) {
+    margin-right: 10px;
+  }
+
+  :global(.ant-pagination.mini .ant-pagination-options-size-changer) {
+    margin-right: 10px;
+  }
+
+  .editIcon {
+    color: $main-light-blue;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.tableSearchBar {
+  margin-bottom: 0.5rem;
+}
+
+.actionButton {
+  border: unset;
+  background-color: #2084ad;
+  color: $main-white;
+
+  :global(.anticon) {
+    @include Icon;
+  }
+}
+
+.tableauButton {
+  border: unset;
+  background-color: #faad14;
+  color: #201602;
+
+  :global(.anticon) {
+    @include Icon;
+  }
+}
+
+.tableSearchBar {
+  margin-bottom: 0.5rem;
+}
+
+.tableSearchBarCustomDataReports {
+  margin-bottom: 0.5rem;
+  float: right;
+}
+
+.red {
+  color: red;
+}

@@ -1,0 +1,18 @@
+@import 'fonts';
+@import 'colors';
+@import 'vars';
+
+.form {
+  & > :global(.ant-form-item) {
+    margin-bottom: 0;
+  }
+}
+
+.divider {
+  margin: 0 -#{$grid-gutter} $grid-gutter;
+  width: unset;
+}
+
+.metricsPickerWrapper {
+  padding-top: 8px;
+}

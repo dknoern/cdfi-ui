@@ -1,0 +1,9 @@
+@import 'fonts';
+
+.form {
+  :global(.ant-input) {
+    @include fontSize(sm);
+
+    min-height: 32px;
+  }
+}

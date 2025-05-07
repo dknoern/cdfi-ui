@@ -1,0 +1,21 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.stepTitle {
+  &:global(.ant-typography) {
+    @include fontSize(xl);
+    @include fontWeight(medium);
+
+    margin-bottom: 12px;
+  }
+}
+
+.stepIntro {
+  @include fontSize(lg);
+
+  &:global(.ant-typography.ant-typography-secondary) {
+    color: $grey-8;
+    margin-bottom: $grid-gutter * 2;
+  }
+}

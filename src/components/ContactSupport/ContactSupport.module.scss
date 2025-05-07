@@ -1,0 +1,66 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.divider {
+  width: unset;
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+}
+
+.userInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+
+  dt {
+    width: 20%;
+  }
+  dd {
+    width: 80%;
+  }
+}
+
+.logo {
+  height: 32px;
+  margin-bottom: 45px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner {
+    width: 500px;
+    padding: 40px;
+    border-radius: $border-radius-basic;
+    background: $main-white;
+
+    :global(div.ant-typography) {
+      @include fontSize(lg);
+      @include fontWeight(medium);
+
+      margin-bottom: $grid-gutter !important;
+      line-height: 24px !important;
+    }
+
+    :global(h1.ant-typography) {
+      @include fontWeight(medium);
+      @include fontSize(xl);
+
+      margin-bottom: 16px;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  button[type='submit'] {
+    margin-left: 150px;
+    padding: 0 30px;
+  }
+}

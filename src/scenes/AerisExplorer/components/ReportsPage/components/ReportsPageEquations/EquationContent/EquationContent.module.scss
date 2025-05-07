@@ -1,0 +1,30 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+@import '../../../ReportsPage.module.scss';
+
+.tabPane {
+  height: 400px;
+}
+
+.tablePane {
+  width: 80vw;
+  margin: $grid-gutter $grid-gutter;
+}
+
+.table :global {
+  .ant-table-thead .ant-table-cell {
+    color: $main-white;
+    background-color: $main-blue;
+    padding-left: 12px;
+  }
+}
+
+.multiTablePane {
+  height: 800px;
+  width: 80vw;
+  margin: $grid-gutter $grid-gutter;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}

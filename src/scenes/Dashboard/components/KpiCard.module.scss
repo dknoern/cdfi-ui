@@ -1,0 +1,52 @@
+@import 'fonts';
+@import 'colors';
+@import 'effects';
+@import 'vars';
+@import 'mixins';
+
+.card {
+  box-shadow: $card-box-shadow;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  :global(.ant-card-body) {
+    padding: 0 $grid-gutter;
+  }
+}
+
+.title {
+  @include fontSize(lg);
+
+  color: $main-black;
+}
+
+.valueCol {
+  @include font-title;
+  @include fontWeight(medium);
+  @include fontSize(xl);
+
+  color: $main-blue;
+  text-align: end;
+
+  &Small {
+    @include fontSize(lg);
+    @include fontWeight(semi-bold);
+    @include textEllipsis;
+
+    line-height: calc(
+      #{map-get($font-sizes, 'xxl')}px * #{$line-height-default}
+    );
+  }
+}
+
+.contentWrapper {
+  flex-wrap: nowrap;
+}
+
+.textCol {
+  .title {
+    @include fontSize(lg);
+  }
+}

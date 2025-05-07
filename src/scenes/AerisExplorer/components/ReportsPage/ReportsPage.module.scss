@@ -1,0 +1,58 @@
+@import 'colors';
+@import 'fonts';
+
+.spinnerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.lightBlue {
+  color: $main-light-blue;
+}
+
+.lightBlueOverRide {
+  color: $main-light-blue !important;
+}
+
+.titleContainer {
+  margin: 12px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.hintText {
+  color: $grey-5;
+  @include fontSize('sm');
+}
+
+@mixin buttonStyles(
+  $color,
+  $borderColor,
+  $backgroundColor: none,
+  $flexDirection: row-reverse
+) {
+  margin-right: 8px;
+  color: $color;
+  border: 1px solid $borderColor;
+  background: $backgroundColor;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: $flexDirection;
+
+  & > span {
+    margin-bottom: 2px;
+  }
+
+  & > :global(.anticon) {
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+}
+
+.backButton {
+  @include buttonStyles($main-light-blue, $main-light-blue, none, row);
+}

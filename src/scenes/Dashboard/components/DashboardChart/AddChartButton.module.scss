@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.wrapper {
+  height: 208px;
+  background-color: unset;
+  border: 2px dashed #a1abb3;
+  cursor: pointer;
+  color: $main-light-blue;
+
+  &:hover {
+    background-color: $main-white;
+    color: lighten($color: $main-light-blue, $amount: 10%);
+    border-color: lighten($color: $main-light-blue, $amount: 10%);
+  }
+
+  :global(.ant-card-body) {
+    height: 100%;
+  }
+}
+
+.contentWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div:first-child:not(:only-child) {
+    margin-bottom: calc(#{$grid-gutter} - 6px);
+  }
+}
+
+.text {
+  @include fontSize(xl);
+
+  text-align: center;
+}
+
+.plusIcon {
+  @include fontSize(xxl);
+}

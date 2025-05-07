@@ -1,0 +1,55 @@
+@import 'colors';
+@import 'effects';
+@import 'fonts';
+
+$height-small-chart: 208px;
+
+.container {
+  height: $height-small-chart;
+  line-height: 32px;
+  box-shadow: $card-box-shadow;
+  background-color: $grey-1;
+  position: relative;
+
+  :global(.ant-card-body) {
+    height: 100%;
+    padding: 0;
+  }
+}
+
+.chartItem {
+  padding: 7px 24px;
+  color: $main-black;
+
+  span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 35px;
+  }
+
+  &:global(.ant-list-item) {
+    border-bottom: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $blue-1;
+  }
+}
+
+.closeIcon {
+  @include fontSize(lg);
+
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 2;
+
+  color: $grey-5;
+  cursor: pointer;
+
+  &:hover {
+    color: $grey-8;
+  }
+}

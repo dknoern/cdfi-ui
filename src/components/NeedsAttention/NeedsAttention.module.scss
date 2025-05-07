@@ -1,0 +1,98 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+%badge {
+  @include fontWeight(semi-bold);
+
+  left: 100%;
+  background-color: $blue-1;
+  color: $main-light-blue;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  padding: 0;
+  min-width: 0;
+  line-height: 14px;
+  font-size: 8px;
+}
+
+.container {
+  @include fontSize(sm);
+
+  background-color: $main-white;
+  color: $main-black;
+  line-height: 20px;
+  width: 400px;
+  padding-top: 12px;
+}
+
+.tabs {
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0;
+  }
+
+  :global(.ant-tabs-nav-list) {
+    width: 100%;
+  }
+
+  :global(.ant-tabs-tab) {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding: 6px 0;
+  }
+
+  :global(.ant-badge-count) {
+    @extend %badge;
+  }
+}
+
+.list {
+  @include fontSize(sm);
+
+  line-height: 20px;
+}
+
+:global(.ant-list-item).item {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 20px 8px 30px;
+  align-items: flex-start;
+  border-bottom: 1px solid $grey-4;
+
+  &:hover {
+    background-color: $grey-2;
+  }
+
+  &.isNew {
+    background-color: $blue-1;
+  }
+
+  .viewBtn {
+    margin-left: 10px;
+    padding: 0;
+    position: relative;
+    bottom: 8px;
+  }
+
+  .date {
+    margin-left: 10px;
+    text-align: end;
+    font-style: italic;
+    color: $main-light-blue;
+  }
+
+  .text {
+    flex: 1;
+  }
+}
+
+.zeroNotifications {
+  padding: 30px;
+  text-align: center;
+}
+
+.highlightedText {
+  color: $main-light-blue;
+}

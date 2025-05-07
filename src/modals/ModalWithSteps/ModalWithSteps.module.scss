@@ -1,0 +1,49 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+:global(h3.ant-typography) {
+  &.titleText {
+    @include font-title;
+    @include fontWeight(medium);
+
+    color: $main-black;
+    margin-bottom: 24px;
+  }
+}
+
+.defaultBtn {
+  border-color: $main-green;
+  color: $main-green;
+}
+
+.primaryBtn {
+  border-color: $main-green;
+  background-color: $main-green;
+}
+
+.modalWrap {
+  :global(.ant-modal) {
+    max-width: 1200px;
+
+    :global(.ant-modal-content) {
+      height: $modal-body-height;
+      display: flex;
+      flex-direction: column;
+    }
+
+    :global(.ant-modal-content .ant-modal-body) {
+      flex: 1;
+      overflow-y: scroll;
+    }
+
+    @include breakpoint(xl) {
+      max-width: 1512px;
+    }
+  }
+}
+
+.step {
+  cursor: pointer;
+}

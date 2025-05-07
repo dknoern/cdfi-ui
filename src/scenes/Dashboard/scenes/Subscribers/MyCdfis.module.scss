@@ -1,0 +1,84 @@
+@import 'colors';
+
+.tableSearchBar {
+  margin-bottom: 0.5rem;
+}
+
+.subscriptionsTable {
+  :global(td.ant-table-column-sort) {
+    background-color: transparent;
+  }
+
+  :global(.ant-table-tbody > tr > td.ant-table-column-sort) {
+    background-color: transparent;
+  }
+
+  :global(.ant-table.ant-table-small .ant-table-thead > tr > th) {
+    padding: 6px;
+  }
+
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr > td) {
+    position: static !important;
+    padding: 10px;
+  }
+
+  :global(.ant-pagination.mini .ant-pagination-options-size-changer) {
+    margin-right: 10px;
+  }
+
+  :global(.ant-table-row.ant-table-row-level-0) {
+    background-color: $blue-1;
+    &:hover {
+      background-color: $blue-1;
+      td {
+        background-color: $blue-1;
+      }
+    }
+
+    > td:hover {
+      background-color: $blue-1;
+    }
+
+    :global(.ant-table.ant-table-small .ant-table-tbody > tr > td) {
+      background-color: $blue-1;
+    }
+    :global(.ant-table-row:hover > td) {
+      background-color: $blue-1;
+    }
+  }
+
+  :global(.ant-table-tbody > tr:nth-child(odd).ant-table-row:hover > td) {
+    background-color: unset;
+  }
+
+  :global(.ant-table-row.ant-table-row-level-1) {
+    background-color: $main-white;
+
+    &:hover {
+      background-color: $main-white;
+      td {
+        background-color: $main-white;
+      }
+    }
+
+    :global(.ant-table.ant-table-small .ant-table-tbody > tr > td) {
+      background-color: $main-white;
+    }
+
+    > td:hover {
+      background-color: $main-white;
+    }
+    :global(.ant-table-row:hover > td) {
+      background-color: $main-white;
+    }
+  }
+}
+
+.link {
+  color: $main-dark-blue;
+  text-decoration: underline !important;
+
+  &:hover {
+    color: $main-light-blue;
+  }
+}

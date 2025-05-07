@@ -1,0 +1,31 @@
+@import 'colors';
+@import 'fonts';
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.actionButton {
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  background: none;
+}
+
+.actionButtonIcon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+:global(.ant-select.ant-select-single) {
+  &.filter {
+    min-width: 250px;
+    margin-left: 16px;
+
+    :global(.ant-select-selector) {
+      border-color: $main-white;
+    }
+  }
+}

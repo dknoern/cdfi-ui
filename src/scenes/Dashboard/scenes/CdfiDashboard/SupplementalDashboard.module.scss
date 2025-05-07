@@ -1,0 +1,59 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.table {
+  :global(.ant-pagination-options-size-changer.ant-select) {
+    margin-right: 10px;
+  }
+
+  :global(.ant-pagination.mini .ant-pagination-options-size-changer) {
+    margin-right: 10px;
+  }
+
+  :global {
+    .ant-table-container {
+      z-index: 0; // Lower than the footer's z-index
+    }
+
+    .ant-table-tbody > tr:hover > td {
+      background-color: $blue-6 !important;
+    }
+
+    .ant-table-cell {
+      text-align: right;
+    }
+
+    .ant-table-cell-fix-left-last {
+      text-align: left;
+    }
+  }
+
+  .editIcon {
+    color: $main-light-blue;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.spinLoadingFile {
+  position: fixed;
+  width: 90%;
+  height: 100vh;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 100;
+
+  :global(.ant-spin-spinning) {
+    position: relative !important;
+    top: 70px;
+  }
+}
+
+.tableSearchBar {
+  margin-bottom: 0.5rem;
+}

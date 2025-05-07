@@ -1,0 +1,6 @@
+export enum MetricRequestStatus {
+  APPROVED = 'APPROVED',
+  DECLINED = 'DECLINED',
+  PENDING_APPROVAL = 'PENDING_APPROVAL',
+  NOT_REQUIRED = 'NOT_REQUIRED',
+}

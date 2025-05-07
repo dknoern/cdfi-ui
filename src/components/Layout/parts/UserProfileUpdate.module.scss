@@ -1,0 +1,31 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.form {
+  :global(.ant-form-item-label) {
+    @include fontWeight(medium);
+  }
+
+  :global(.ant-tabs) {
+    margin-bottom: 2 * $grid-gutter;
+  }
+
+  :global(.ant-tabs-nav) {
+    width: 100%;
+  }
+
+  :global(.ant-tabs-tab) {
+    text-align: center;
+  }
+}
+
+.changePasswordSpan {
+  margin-bottom: 1rem;
+  color: rgb(255, 132, 0)
+}
+
+.changePasswordSpan:hover {
+  cursor: pointer;
+}
+

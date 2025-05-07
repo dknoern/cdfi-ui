@@ -1,0 +1,12 @@
+@import 'colors';
+@import 'mixins';
+
+.actionButton {
+  border: 1px solid $main-blue;
+  background-color: unset;
+  color: $main-blue;
+
+  :global(.anticon) {
+    @include Icon;
+  }
+}

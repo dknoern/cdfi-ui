@@ -1,0 +1,21 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.modalWrap {
+  :global(.ant-modal-header) {
+    padding: $grid-gutter;
+    border-bottom: 1px solid $main-white;
+  }
+
+  :global(.ant-modal-title) {
+    @include fontSize(xl);
+    @include font-title;
+
+    color: $main-light-blue;
+  }
+
+  :global(.ant-modal-body) {
+    padding-top: 0;
+  }
+}

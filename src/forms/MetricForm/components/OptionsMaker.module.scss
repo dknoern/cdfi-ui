@@ -1,0 +1,25 @@
+@import 'colors';
+
+.addBtn {
+  &:global(.ant-btn) {
+    color: $main-light-blue;
+  }
+
+  :global(.anticon) {
+    vertical-align: 0.1em;
+  }
+}
+
+.delBtn {
+  &:global(.ant-btn) {
+    color: $grey-5;
+  }
+
+  :global(.anticon) {
+    vertical-align: 0.1em;
+  }
+}
+
+.input {
+  border: 0;
+}

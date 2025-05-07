@@ -1,0 +1,30 @@
+@import 'fonts';
+@import 'colors';
+@import 'vars';
+
+.modal {
+  :global(.ant-modal-header) {
+    padding: $grid-gutter;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.ant-modal) {
+    :global(.ant-modal-content .ant-modal-body) {
+      height: $modal-body-height;
+      overflow-y: scroll;
+    }
+  }
+
+  :global(.ant-modal-title) {
+    @include font-title;
+
+    font-size: 24px;
+  }
+}
+
+.saveBtn {
+  padding: 6px 22px;
+  height: unset;
+  background-color: $main-green;
+  border-color: $main-green;
+}

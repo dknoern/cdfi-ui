@@ -1,0 +1,24 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.label {
+  margin-top: 20px;
+}
+
+:global(div.ant-typography) {
+  &.titleHint {
+    @include fontSize(lg);
+
+    margin-bottom: 40px;
+  }
+
+  &.secondaryLabel {
+    @include fontSize(md);
+    @include fontWeight(medium);
+
+    color: $grey-8;
+
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #226c8b;
+  background: #05425c;
+}
+
+.login-page {
+  height: 100%;
+  overflow: hidden;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 56px;
+  border-radius: 6px;
+}
+
+.below-login-box-left,
+.below-login-box-right {
+  color: #fff;
+  font-size: 13px;
+  padding: 24px;
+  padding-top: 16px;
+}
+
+.below-login-box-left {
+  opacity: 0.32;
+}
+
+.below-login-box-right {
+  text-align: right;
+}
+
+#ieBlocker {
+  display: block !important;
+  height: 100%;
+}
+
+.center-this {
+  text-align: center;
+}
+
+.p64 {
+  padding: 64px;
+}

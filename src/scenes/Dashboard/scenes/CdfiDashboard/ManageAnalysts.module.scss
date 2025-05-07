@@ -1,0 +1,56 @@
+@import 'vars';
+@import 'fonts';
+@import 'colors';
+
+.modalWrap {
+  :global(.ant-typography) {
+    @include fontSize(sm);
+  }
+
+  :global(.ant-modal-header) {
+    padding: $grid-gutter;
+    border-bottom: 1px solid $main-white;
+  }
+
+  :global(.ant-modal-title) {
+    @include fontSize(xl);
+    @include font-title;
+
+    color: $main-light-blue;
+  }
+
+  .title, .subTitle {
+    color: $main-light-blue;
+  }
+
+  .subTitle {
+    margin-top: .3rem;
+    font-size: medium;
+  }
+
+  :global(.ant-modal-body) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  :global(.ant-modal-footer) {
+    padding: $grid-gutter;
+  }
+}
+
+.cancelBtn {
+  border-color: $main-blue;
+  color: $main-blue;
+}
+
+.actionBtn {
+  border-color: $main-green;
+  background-color: $main-green;
+}
+
+.list {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}

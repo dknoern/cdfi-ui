@@ -1,0 +1,19 @@
+@import 'colors';
+@import 'vars';
+
+$with-preview-container-min-height: 502px;
+
+.container {
+  margin: -#{$grid-gutter};
+  min-height: $with-preview-container-min-height;
+}
+
+.workArea {
+  padding: $grid-gutter;
+}
+
+.previewArea {
+  box-shadow: inset 2px 0 8px #c4c4c4;
+  background-color: $grey-1;
+  padding: $grid-gutter;
+}

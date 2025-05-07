@@ -1,0 +1,6 @@
+@import 'fonts';
+
+.label {
+  @include fontSize(lg);
+  @include fontWeight(medium);
+}

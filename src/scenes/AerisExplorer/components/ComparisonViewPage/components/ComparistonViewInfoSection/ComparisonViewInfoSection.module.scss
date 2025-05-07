@@ -1,0 +1,34 @@
+@import 'colors';
+@import 'fonts';
+@import '../../ComparisonViewPage.module.scss';
+
+.exportButton {
+  margin-bottom: 12px;
+  @include buttonStyles($main-light-blue, $main-light-blue, none, row);
+}
+
+.card {
+  min-height: 175px;
+}
+
+.totalAssetsPrefix {
+  @include fontSize('sm');
+}
+
+.buttonAsText {
+  border: none;
+  padding: 0;
+  background: none;
+  outline: none;
+  text-align: left;
+  @include fontSize('md');
+}
+
+.displayFlexSmGap {
+  display: flex;
+  gap: 8px;
+}
+
+.greyFive {
+  color: $grey-5;
+}

@@ -1,0 +1,8 @@
+@import 'fonts';
+
+.label {
+  @include fontWeight(medium);
+  @include fontSize(md);
+
+  line-height: 22px;
+}

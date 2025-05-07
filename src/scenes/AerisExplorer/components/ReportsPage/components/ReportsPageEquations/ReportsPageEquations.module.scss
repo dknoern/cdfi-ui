@@ -1,0 +1,29 @@
+@import 'colors';
+@import 'fonts';
+@import '../../ReportsPage.module.scss';
+
+.basicTable {
+  width: 100%;
+
+  :global {
+    .ant-table {
+      border: none;
+    }
+
+    .ant-table-content {
+      border: none;
+    }
+
+    .ant-table-thead > tr > th {
+      border-bottom: none;
+      padding: 0;
+      color: inherit;
+      background: none;
+    }
+
+    .ant-table-tbody > tr > td {
+      border-bottom: none;
+      padding: 12px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import 'colors';
+@import 'mixins';
+
+.additionalContacts {
+  margin-top: -24px;
+}
+
+.formItemNoBottomMargin {
+  margin-bottom: 0;
+}
+
+.removeBtn {
+  margin-left: 8px;
+  line-height: 14px;
+}
+
+.removeIcon {
+  @include Icon();
+
+  color: $grey-5;
+}

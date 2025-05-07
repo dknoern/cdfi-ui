@@ -1,0 +1,61 @@
+@import 'colors';
+
+.container {
+  font-size: 14px;
+  color: #0f2c40;
+  background-color: $main-white;
+  border: 1px solid $grey-5;
+  border-bottom: 0;
+
+  & > * {
+    position: absolute;
+  }
+}
+
+.topLeft {
+  width: 36px;
+  height: 36px;
+  background-color: #cbcfd2;
+  display: flex;
+  justify-content: center;
+  color: #444;
+  border: 1px solid #e0e1e3;
+}
+
+.cols,
+.rows {
+  background-color: #cbcfd2;
+  text-align: center;
+  font-weight: 700;
+
+  :global(.ReactVirtualized__Grid__innerScrollContainer) {
+    div {
+      border: 1px solid #e0e1e3;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.cols {
+  height: 36px;
+  left: 36px;
+  right: 0;
+}
+
+.colsGrid {
+  overflow: hidden;
+}
+
+.rows {
+  width: 36px;
+  top: 36px;
+  bottom: 0;
+}
+
+.table {
+  left: 36px;
+  top: 36px;
+}

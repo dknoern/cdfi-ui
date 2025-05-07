@@ -1,0 +1,29 @@
+.logo {
+  object-fit: contain;
+  height: 30px;
+  width: 100%;
+  margin: 30px auto 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text {
+  text-align: center;
+
+  .greeting {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .message {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+  }
+}
+
+.footnote {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 0.75em;
+}

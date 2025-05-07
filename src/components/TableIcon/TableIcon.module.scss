@@ -1,0 +1,40 @@
+@import 'fonts';
+@import 'colors';
+
+%withRightMargin {
+  margin-right: 20px;
+}
+
+%withLeftMargin {
+  margin-left: 38px;
+}
+
+%icon {
+  @include fontSize(xl);
+
+  vertical-align: middle;
+  color: $main-blue;
+  display: inline-block;
+}
+
+.folder {
+  @extend %icon;
+}
+
+.subFolder {
+  @extend %icon;
+  @extend %withRightMargin;
+}
+
+.document {
+  @extend %icon;
+  @extend %withRightMargin;
+  @extend %withLeftMargin;
+}
+
+.branch {
+  @extend %icon;
+
+  margin-top: -18px;
+  margin-right: -10px;
+}

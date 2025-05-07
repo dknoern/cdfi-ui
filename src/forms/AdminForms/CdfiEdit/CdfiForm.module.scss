@@ -1,0 +1,73 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+.form {
+  width: 65vw;
+  background-color: white;
+  padding: 20px;
+
+  :global(.ant-form-item-label) {
+    @include fontWeight(medium);
+  }
+
+  :global(.ant-tabs) {
+    margin-bottom: 2 * $grid-gutter;
+  }
+
+  :global(.ant-tabs-nav) {
+    width: 100%;
+  }
+
+  :global(.ant-tabs-tab) {
+    text-align: center;
+  }
+}
+
+.wrapperButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.cancelBtn {
+  border-color: $main-blue;
+  color: $main-blue;
+  float: left;
+}
+
+.actionBtn {
+  border-color: $main-green;
+  background-color: $main-green;
+  float: right;
+}
+
+.uploadBtn {
+  border: 1px solid $main-blue;
+  background-color: unset;
+  color: $main-blue;
+}
+.activitySummary:first-letter {
+  text-transform: uppercase;
+}
+.warningColor {
+  color: $main-red;
+  font-weight: 500;
+}
+
+.warningColor {
+  &:global(.anticon){
+    font-size: 20px;
+    float: left;
+    margin-right: 12px;
+  }
+}
+
+.mainColor {
+  color: $main-blue
+}
+
+.editButton {
+  color: $main-blue;
+  width: 110px;
+}

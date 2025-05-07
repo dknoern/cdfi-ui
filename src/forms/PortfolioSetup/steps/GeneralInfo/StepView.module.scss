@@ -1,0 +1,7 @@
+@import 'mixins';
+
+.select {
+  :global(.ant-select-selection-item .ant-select-selection-item-remove .anticon) {
+    @include Icon;
+  }
+}

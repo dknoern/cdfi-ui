@@ -1,0 +1,96 @@
+@import 'vars';
+@import 'colors';
+@import 'effects';
+@import 'fonts';
+@import 'mixins';
+
+.contentItem {
+  & + & {
+    margin-top: $grid-gutter;
+    padding-top: $grid-gutter;
+    border-top: 1px solid $grey-4;
+  }
+}
+
+.graphSelectLabel {
+  @include fontWeight(medium);
+  @include fontSize(lg);
+
+  display: block;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  background: none;
+
+  & > :global(.anticon) {
+    @include fontSize(md);
+    @include Icon;
+  }
+}
+
+.divider {
+  background: $grey-4;
+  margin: calc($grid-gutter / 2) -#{$grid-gutter} $grid-gutter;
+  width: unset;
+}
+
+.graphContainer {
+  box-shadow: $card-box-shadow;
+  background-color: white;
+  margin: $grid-gutter auto;
+  padding: $grid-gutter 0;
+  border-radius: 4px;
+  height: 600px;
+  overflow-x: scroll;
+}
+
+.chartTable {
+  tbody :global(.ant-table-cell-fix-left) {
+    background: $main-white;
+  }
+
+  tbody :global(tr.ant-table-row) {
+    color: $main-black;
+  }
+
+  tbody :global(tr.rowAggregated) {
+    background-color: $main-light-blue;
+    color: $main-white;
+
+    td:first-of-type {
+      background-color: $main-light-blue;
+      cursor: pointer;
+    }
+  }
+
+  tbody :global(tr.ant-table-row:nth-child(n)) {
+    &:hover {
+      td {
+        background: inherit;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    .equationRow {
+      display: flex;
+      align-items: center;
+    }
+
+    .expandIcon {
+      margin-right: 10px;
+
+      &:not(.expandIconReversed) {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

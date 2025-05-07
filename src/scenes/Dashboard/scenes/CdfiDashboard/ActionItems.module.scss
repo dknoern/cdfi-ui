@@ -1,0 +1,80 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+.container {
+  max-width: 240px;
+
+  :global(.ant-form-item) {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  > button:last-child {
+    margin-right: 0;
+  }
+}
+
+.popover {
+  color: $main-black;
+
+  :global(.ant-popover-inner-content) {
+    padding: 16px;
+  }
+}
+
+.buttonIcon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+.moveForm {
+  .folderIcon {
+    @include fontSize(lg);
+
+    color: $main-blue;
+
+    margin-right: 4px;
+    line-height: initial;
+  }
+
+  :global(.ant-tree) {
+    color: $main-black;
+  }
+
+  :global(.ant-tree .ant-tree-switcher) {
+    width: 0px;
+  }
+
+  :global(.ant-tree .ant-tree-node-content-wrapper .ant-tree-iconEle) {
+    line-height: initial;
+  }
+
+  :global(.ant-tree .ant-tree-node-content-wrapper) {
+    @include textEllipsis;
+
+    padding: 0;
+  }
+
+  :global(.ant-tree.ant-tree-block-node
+      .ant-tree-list-holder-inner
+      .ant-tree-node-content-wrapper) {
+    padding: 4px 2px;
+  }
+}
+
+.button {
+  transition: none;
+  margin-top: -50px;
+  margin-bottom: 10px;
+  float: right;
+}

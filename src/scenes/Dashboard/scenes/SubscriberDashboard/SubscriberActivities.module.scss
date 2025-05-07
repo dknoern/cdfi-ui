@@ -1,0 +1,50 @@
+@import 'colors';
+@import 'mixins';
+
+
+:global(.ant-table.ant-table-small .ant-table-thead > tr > th) {
+  padding: 6px;
+}
+
+:global(.ant-table.ant-table-small .ant-table-tbody > tr > td) {
+  padding: 10px;
+}
+
+.tableSearchBar {
+  margin-bottom: 0.5rem;
+}
+
+.contactsTable {
+  :global(.ant-table.ant-table-small .ant-table-thead > tr > th) {
+    padding: 6px;
+  }
+
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr > td) {
+    position: static !important;
+    padding: 10px;
+  }
+
+  :global(.ant-pagination-options-size-changer.ant-select) {
+    margin-right: 10px;
+  }
+
+  :global(.ant-pagination.mini .ant-pagination-options-size-changer) {
+    margin-right: 10px;
+  }
+}
+
+.subscriptionTable {
+  :global(.ant-table.ant-table-small .ant-table-tbody > tr > td) {
+    vertical-align: top;
+  }
+}
+
+.actionButton {
+  border: 1px solid $main-blue;
+  background-color: unset;
+  color: $main-blue;
+
+  :global(.anticon) {
+    @include Icon;
+  }
+}

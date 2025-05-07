@@ -1,0 +1,14 @@
+@import 'vars';
+@import 'colors';
+
+.globalMetricsTab {
+  padding-top: 16px;
+}
+
+.editMetricWrapper {
+  margin-top: 10px;
+}
+
+.explanation {
+  margin-top: $grid-gutter;
+}

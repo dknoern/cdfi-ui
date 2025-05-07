@@ -1,0 +1,9 @@
+@import 'fonts';
+
+.secondaryLabel > :global(.ant-col-24.ant-form-item-label) {
+  padding-bottom: 0;
+}
+
+.primaryLabel {
+  @include fontSize(md);
+}

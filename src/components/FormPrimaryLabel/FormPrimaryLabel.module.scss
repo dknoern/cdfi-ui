@@ -1,0 +1,26 @@
+@import 'colors';
+@import 'fonts';
+
+.primaryLabel {
+  @include fontWeight(medium);
+  @include fontSize(lg);
+
+  color: $main-black;
+  line-height: 24px;
+}
+
+.number,
+.title::first-letter {
+  @include fontSize(xl);
+}
+
+.hint {
+  @include fontSize(xs);
+
+  font-style: italic;
+  color: $grey-5;
+  margin-left: 8px;
+  vertical-align: bottom;
+  position: relative;
+  top: 2px;
+}

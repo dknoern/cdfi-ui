@@ -1,0 +1,36 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.buttonsLine {
+  @include fontSize(md);
+
+  display: flex;
+  padding: 16px 16px + $grid-gutter;
+  line-height: 32px;
+  color: $main-black;
+
+  &.buttonsLineGlobal {
+    margin-left: -$grid-gutter;
+    margin-right: -$grid-gutter;
+    border-top: 1px solid #c8d6dd;
+    box-shadow: 0px -9px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  &.buttonsLineLocal {
+    background-color: $main-white;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .buttons {
+    display: flex;
+    margin-left: 44px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+}

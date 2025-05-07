@@ -1,0 +1,28 @@
+@import 'fonts';
+@import 'colors';
+
+.icon {
+  @include fontSize(lg);
+
+  vertical-align: 2px;
+
+  &.accepted {
+    color: $main-green;
+  }
+
+  &.pending {
+    color: $main-yellow;
+  }
+
+  &.notRequired {
+    color: $main-red;
+  }
+}
+
+:global(.ant-tooltip) {
+  &.overlay {
+    :global(.ant-tooltip-inner) {
+      white-space: nowrap;
+    }
+  }
+}

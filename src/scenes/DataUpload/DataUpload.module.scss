@@ -1,0 +1,25 @@
+@import 'vars';
+@import 'colors';
+@import 'fonts';
+
+.buttons {
+  margin-top: $grid-gutter;
+
+  button {
+    color: $main-blue;
+    border: 1px solid $main-blue;
+    background: none;
+  }
+}
+
+.icon {
+  @include fontSize(md);
+
+  vertical-align: middle;
+}
+
+.linkBtn {
+  @include fontSize(lg);
+
+  padding: 0;
+}

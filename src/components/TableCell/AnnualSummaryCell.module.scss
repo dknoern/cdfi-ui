@@ -1,0 +1,17 @@
+@import 'colors';
+
+%annualSummaryCell {
+  background-color: $yellow-2;
+  color: $main-light-blue;
+}
+
+.cell {
+  @extend %annualSummaryCell;
+}
+
+:global(.ant-table-tbody > tr.ant-table-row:hover),
+:global(.ant-table-tbody > tr:nth-child(odd).ant-table-row:hover) {
+  & > .cell {
+    @extend %annualSummaryCell;
+  }
+}

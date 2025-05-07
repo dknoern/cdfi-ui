@@ -1,0 +1,129 @@
+@import 'colors';
+@import 'fonts';
+@import 'vars';
+
+$panelWidth: 240px;
+
+%hoverableArea {
+  cursor: pointer;
+
+  &.active,
+  &:hover {
+    background: $grey-3;
+    box-shadow: inset -3px 0px 0px 0px $main-blue;
+  }
+}
+
+.categoryPanel {
+  li ul {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    button {
+      padding-left: 36px;
+      line-height: 18px;
+    }
+  }
+
+  li.open {
+    ul {
+      max-height: 500px;
+    }
+
+    .arrowBtn span {
+      transform: rotate(180deg);
+    }
+  }
+
+  button {
+    -webkit-appearance: none;
+    display: inline-block;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: $main-black;
+    cursor: pointer;
+    text-align: left;
+    padding: 8px 24px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.special {
+      @extend %hoverableArea;
+
+      color: $main-blue;
+
+      margin-bottom: 5px;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+
+      color: rgba(0, 0, 0, 0.25);
+
+      margin-bottom: 5px;
+    }
+
+    &:not(.arrowBtn) {
+      flex: 1;
+    }
+  }
+
+  .arrowBtn {
+    padding-right: 24px;
+    padding-left: 7px;
+    width: 43px;
+
+    span {
+      transition: all 0.3s;
+    }
+
+    + button {
+      @include fontWeight(semi-bold);
+
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.categoryBtn {
+  @include fontWeight(semi-bold);
+
+  line-height: 18px;
+}
+
+.categoryHeader {
+  @extend %hoverableArea;
+  @include fontWeight(semi-bold);
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.cancelBtn {
+  border-color: $main-blue;
+  color: $main-blue;
+}
+
+.header {
+  @include fontWeight(medium);
+  @include fontSize(lg);
+  @include font-title;
+
+  padding: 5px 24px;
+  margin-bottom: 10px;
+}
+
+button.closeBtn {
+  position: absolute;
+  right: 24px;
+  top: 29px;
+  padding: 0;
+
+  color: $main-blue;
+}

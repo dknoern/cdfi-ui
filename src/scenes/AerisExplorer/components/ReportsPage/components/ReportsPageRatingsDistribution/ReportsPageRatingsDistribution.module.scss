@@ -1,0 +1,37 @@
+@import 'colors';
+@import 'fonts';
+@import '../../ReportsPage.module.scss';
+
+.pieChartRow {
+  height: 450px;
+}
+
+.pieChartContainer {
+  height: 350px;
+}
+
+.legendContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.labelKeyContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.legendKey {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.buttonAsText {
+  border: none;
+  padding: 0;
+  background: none;
+  outline: none;
+  text-align: left;
+  @include fontSize('md');
+}
