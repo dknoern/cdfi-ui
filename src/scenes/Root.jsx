@@ -15,6 +15,7 @@ import {
   CdfiSelector,
   AerisExplorer,
   RatingsDefinitions,
+  HotCdfis,
 } from './index';
 import { MyCdfis } from './Dashboard/scenes/Subscribers/MyCdfis';
 import { RatingsDistribution } from './Dashboard/scenes/Subscribers/RatingsDistribution';
@@ -82,6 +83,7 @@ const Logged = observer(() => {
             <Route path="/aerisExplorer/global" component={AerisExplorer} />
             <Route path="/aerisExplorer/subscriber/:subscriberId" component={AerisExplorer} />
             <Route path="/aerisExplorer/subscriber/:subscriberId/cdfi/:cdfiId" component={AerisExplorer} />
+            <Route path="/hot-cdfis" component={HotCdfis} key="hot-cdfis" />
             <Route path="/aggregated-metrics" component={ManageAggregatedMetrics} key="aggregated-metrics" />
             <Route exact path="/auto-email" component={AutoEmailPage} />
             <Route exact path="/cdfi/:id" component={Cdfi} key="cdfi" />
@@ -135,6 +137,7 @@ const Logged = observer(() => {
           <Switch>
             <Route path="/aerisExplorer/cdfi/:cdfiId" component={AerisExplorer} />
             <Route path="/aerisExplorer/subscriber/:subscriberId" component={AerisExplorer} />
+            <Route path="/hot-cdfis" component={HotCdfis} key="hot-cdfis" />
             <Route path="/cdfi" component={SubscribersCdfiManage} key="manage" />
             <Route path="/cdfiselector" component={CdfiSelector} key="cdfiSelector" />
             <Route path="/comparison-view-page/:id" component={ComparisonViewPage} key="comparison-view-page" />
@@ -163,6 +166,7 @@ const Logged = observer(() => {
         <Switch>
           <Route path="/aerisExplorer/cdfi/:cdfiId" component={AerisExplorer} />
           <Route path="/aerisExplorer/subscriber/:subscriberId" component={AerisExplorer} />
+          <Route path="/hot-cdfis" component={HotCdfis} key="hot-cdfis" />
           <Route path="/cdfi/:id" component={Cdfi} key="cdfi" />
           <Route path="/cdfiselector" component={CdfiSelector} key="manage" />
           <Route path="/create-peer-or-portfolio/:groupType/:id?/:userType?/:companyId?" component={CdfiSelector} key="/create-peer-or-portfolio" />
@@ -200,8 +204,7 @@ export const rootComp = ({ isLogged, isFirstLogin }) => {
 
   return (
     <Switch>
-      <Route exact path="/auth/:token" component={Auth} key="auth" />
-      <Route component={Component} />
+      <Route path="/" component={Component} />
     </Switch>
   );
 };
