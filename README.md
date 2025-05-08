@@ -42,3 +42,8 @@ If You are using Visual Studio Code as your editor, please, follow these steps:
 2. Use ant design for UI components
 3. Add new menu items to src/components/Layout/AerisSidebar/routes/user-routes.tsx
 4. When considering backend APIs, new ones are defined in ./swagger.yml
+5. Don't mock data, use real backend APIs that are defined in ./swagger.yml
+6. Define endpoints in src/constants/APIEndpoint.ts, note APIs are accessed via src/tools/apiProcessor.ts
+7. for navigation icons, use ant icons as defined in src/components/Layout/AerisSidebar/tools/tools.tsx
+## API Documentation
+

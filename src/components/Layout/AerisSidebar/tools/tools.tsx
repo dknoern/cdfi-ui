@@ -19,7 +19,8 @@ import {
   FileTextOutlined,
   CheckCircleOutlined,
   CalendarOutlined,
-  FundOutlined, FileExcelOutlined
+  FundOutlined, FileExcelOutlined,
+  FireOutlined
 } from '@ant-design/icons';
 
 export const getIcons = (iconName: string | undefined): any => {
@@ -49,6 +50,8 @@ export const getIcons = (iconName: string | undefined): any => {
       return <PieChartOutlined />;
     case 'auditicon':
       return <AuditOutlined />;
+    case 'fireicon':
+      return <FireOutlined />;
     case 'downloadicon':
       return <DownloadOutlined />;
     case 'fundicon':
