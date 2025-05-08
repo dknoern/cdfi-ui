@@ -45,5 +45,4 @@ If You are using Visual Studio Code as your editor, please, follow these steps:
 5. Don't mock data, use real backend APIs that are defined in ./swagger.yml
 6. Define endpoints in src/constants/APIEndpoint.ts, note APIs are accessed via src/tools/apiProcessor.ts
 7. for navigation icons, use ant icons as defined in src/components/Layout/AerisSidebar/tools/tools.tsx
-## API Documentation
-
+8. put new pages under src/scenes
